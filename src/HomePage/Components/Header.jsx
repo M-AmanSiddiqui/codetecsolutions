@@ -6,7 +6,7 @@ import logo from "../../assets/Images/Echo Desk.png";
 
 function Header() {
   return (
-    <header className="text-gray-600 body-font fixed top-0 left-0 w-full bg-black z-10 shadow-lg">
+    <header className="text-gray-600 body-font fixed top-0 left-0 w-full bg-black  shadow-lg">
       <div className="flex gap-8 justify-center items-center text-slate-200 py-2">
         <h2 className="flex items-center gap-2">
           <CiMail />
