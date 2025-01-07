@@ -3,8 +3,8 @@ import heromain from "../../assets/Images/heromain.png";
 
 function Hero() {
   return (
-    <div className="bg-black text-white overflow-hidden ">
-      <div className="flex items-center justify-between space-x-16 w-full max-w-screen-xl mx-auto px-4 py-16">
+    <div className="bg-black text-white overflow-hidden">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 w-full max-w-screen-xl mx-auto px-4 py-16">
         {/* Hero Image */}
         <div className="flex-1">
           <img className="max-w-full h-auto rounded-lg" src={heromain} alt="Hero" />
@@ -14,8 +14,8 @@ function Hero() {
         <div className="flex-1 space-y-8">
           {/* Who We Are Section */}
           <div className="space-y-5">
-            <h1 className="text-4xl font font-serif font-bold ">Who We Are?</h1>
-            <p className="text-lg">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold">Who We Are?</h1>
+            <p className="text-base md:text-lg">
               <span className="font-bold">CodeTec Solutions</span> is a dynamic software house that brings <br />
               digital solutions to life. With a focus on innovation and design, <br /> we specialize in crafting
               seamless web, mobile, and desktop <br /> applications. Our team is dedicated to curating exceptional
@@ -26,8 +26,8 @@ function Hero() {
 
           {/* What We Do Section */}
           <div className="space-y-5">
-            <h1 className="text-4xl font font-serif font-bold ">What We Do?</h1>
-            <p className="text-lg">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold">What We Do?</h1>
+            <p className="text-base md:text-lg">
               At <span className="font-bold">CodeTec Solutions</span>, we transform ideas into powerful digital <br />
               solutions. We specialize in creating seamless web, mobile, and <br /> desktop applications designed
               to meet the unique needs of <br /> businesses. Our expertise extends to crafting captivating user <br />
