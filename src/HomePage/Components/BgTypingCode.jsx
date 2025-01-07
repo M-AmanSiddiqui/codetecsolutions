@@ -5,7 +5,7 @@ function TypingCode() {
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-12 left-0 w-full h-full object-cover"
         autoPlay
         loop
         muted

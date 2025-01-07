@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { CiMail } from "react-icons/ci";
+import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa";
 import logo from "../../assets/Images/logo.jpg";
 import { FaBars, FaTimes } from "react-icons/fa"; // Add Hamburger icon and Close icon
@@ -16,8 +16,8 @@ function Header() {
     <header className="text-gray-600 body-font fixed top-0 left-0 w-full bg-black shadow-lg z-10 overflow-hidden">
       {/* Top info section */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
-        <h2 className="flex items-center gap-2 text-sm md:text-base">
-          <CiMail />
+        <h2 className="flex items-center gap-1 text-sm md:text-base">
+        <MdOutlineMailOutline />
           contact@codetecsolutions.com
         </h2>
 
@@ -34,7 +34,7 @@ function Header() {
   <img
     src={logo}
     alt="Logo"
-    className="w-16 h-12 sm:w-20 sm:h-16 md:w-25 md:h-20 lg:w-28 lg:h-24 xl:w-32 xl:h-28"
+    className="w-28 h-12 sm:w-36 sm:h-16 md:w-44 md:h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-28"
   />
 </Link>
 

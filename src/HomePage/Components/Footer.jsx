@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../../assets/Images/logo.jpg";
 import { Link } from "react-router-dom";
-import { CiMail } from "react-icons/ci";
+import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationArrow } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
@@ -57,11 +57,7 @@ const Footer = () => {
                 Mobile App Development
               </Link>
             </li>
-            <li>
-              <Link to="/ecommerce" className="hover:text-[#91BE7F]">
-                E-commerce
-              </Link>
-            </li>
+         
             <li>
               <Link to="/graphics" className="hover:text-[#91BE7F]">
                 Graphics
@@ -96,7 +92,7 @@ const Footer = () => {
               <span>contact@codetecsolutions.com</span>
             </li>
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
-              <CiMail />
+            <MdOutlineMailOutline />
               <span>Email: contact@codetecsolutions.com</span>
             </li>
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
