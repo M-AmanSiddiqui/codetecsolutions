@@ -31,7 +31,7 @@ function Header() {
       {/* Main Header Content */}
       <div className="container mx-auto flex flex-wrap p-4 md:flex-row items-center justify-between">
         {/* Logo */}
-        <Link className="flex items-center text-gray-900 mb-4 md:mb-0">
+        <Link to="/" className="flex items-center text-gray-900 mb-4 md:mb-0">
   <img
     src={logo}
     alt="Logo"
@@ -73,7 +73,7 @@ function Header() {
               About Us
             </Link>
             <Link
-              to="/fourth"
+              to="/Contact"
               className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold"
             >
               Contact
@@ -83,9 +83,9 @@ function Header() {
 
         {/* Request A Quote Button */}
         <div className="flex justify-center mt-4 md:mt-0">
-          <button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg text-base text-black font-bold">
+          <Link to="/Contact"><button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg text-base text-black font-bold">
             Request A Quote
-          </button>
+          </button></Link>
         </div>
       </div>
     </header>

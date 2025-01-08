@@ -8,7 +8,7 @@ function AboutHero() {
     <div className="bg-black w-full py-16 text-white">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl text-center font-bold font-serif mb-20 underline">
-        ABOUT
+        ABOUT US
       </h1>
 
       {/* Who We Are Section */}
