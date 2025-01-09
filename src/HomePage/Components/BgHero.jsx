@@ -3,9 +3,9 @@ import bgHero from '../../assets/Images/bgHero.mp4'; // Import the video file
 
 function BgHero() {
   return (
-    <div className="relative w-full h-screen overflow-hidden mt-36">
+    <div className="relative w-full h-screen mt-36 overflow-hidden z-0 ">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0" // Video at the back
         autoPlay
         loop
         muted
@@ -13,7 +13,6 @@ function BgHero() {
       >
         <source src={bgHero} type="video/mp4" />
       </video>
-      
     </div>
   );
 }
