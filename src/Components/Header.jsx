@@ -70,27 +70,32 @@ function Header() {
           >
             <button className="text-lg font-semibold hover:text-gray-300 flex items-center">
              <Link    to="/Services"
+              onMouseEnter={() => setIsOpen(true)}
+              onMouseOver={() => setIsOpen(true)}
+              
+              onMouseLeave={handleMouseLeave}
               className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold"
              > Services </Link>              <span className="ml-1"
-             onMouseEnter={() => setIsOpen(true)}
-             onMouseOver={() => setIsOpen(true)}
-             
-             onMouseLeave={handleMouseLeave}
+            
              >&#9662;</span> {/* Downward arrow */}
             </button>
 
             {/* Dropdown Menu */}
             {isOpen && (
-              <div className="absolute top-full left-0 bg-white text-black shadow-lg rounded-md w-56 mt-1 z-50">
-                <a href="/mobile-app" className="block px-4 py-2 hover:bg-gray-100">
-                  Mobile App Development
-                </a>
-                <a href="/e-commerce" className="block px-4 py-2 hover:bg-gray-100">
-                  E-commerce
-                </a>
-                <a href="/graphic-designing" className="block px-4 py-2 hover:bg-gray-100">
-                  Graphic Designing
-                </a>
+              <div className="absolute top-full left-0 bg-white text-sm text-black shadow-lg rounded-md w-52 mt-1 z-50">
+                      <Link to="/Software Development" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+    Software Development
+  </Link>
+            
+                <Link to="/Mobile App Development" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+    Mobile App Development
+  </Link>
+  <Link to="/Ecommerce" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+    E-commerce
+  </Link>
+  <Link to="/GraphicDesigning" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+    Graphic Designing
+  </Link>
               </div>
             )}
           </div>

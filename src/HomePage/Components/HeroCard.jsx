@@ -2,7 +2,7 @@ import React from 'react';
 import WebDesigning from "../../assets/Images/webdesign.jpg";
 import SoftwareDevelopment from "../../assets/Images/Software Development.jfif";
 import UiandUX from "../../assets/Images/UX-vs-UI-Design.jpeg";
-
+import { Link } from 'react-router-dom';
 function HeroCard() {
   return (
     <div className='bg-black text-white'>
@@ -43,7 +43,7 @@ function HeroCard() {
             alt="UI/UX Designing"
             className="w-full h-48 object-cover rounded-md"
           />
-          <h2 className="text-2xl font-bold mt-4">UI/UX Designing</h2>
+          <Link to="/GraphicDesigning"className="hover:text-[#91BE7F]"><h2 className="text-2xl font-bold mt-4">UI/UX Designing</h2></Link>
           <p className="text-gray-400 mt-2">
             UI/UX designing focuses on creating intuitive interfaces and seamless user experiences, enhancing usability and customer satisfaction.
           </p>

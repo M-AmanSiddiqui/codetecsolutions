@@ -48,19 +48,24 @@ const Footer = () => {
           <h3 className="font-bold uppercase mb-4">Products</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/software-development" className="hover:text-[#91BE7F]">
+              <Link to="/Software Development" className="hover:text-[#91BE7F]">
                 Software Development
               </Link>
             </li>
             <li>
-              <Link to="/mobile-app-development" className="hover:text-[#91BE7F]">
+              <Link to="/Mobile App Development" className="hover:text-[#91BE7F]">
                 Mobile App Development
               </Link>
             </li>
-         
             <li>
-              <Link to="/graphics" className="hover:text-[#91BE7F]">
-                Graphics
+              <Link to="/Ecommerce" className="hover:text-[#91BE7F]">
+               E-commerce
+              </Link>
+            </li>
+           
+            <li>
+              <Link to="/GraphicDesigning"className="hover:text-[#91BE7F]">
+                Graphics Designing
               </Link>
             </li>
           </ul>
