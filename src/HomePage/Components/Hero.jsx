@@ -1,7 +1,7 @@
 import React from 'react';
 import heromain from "../../assets/Images/heromain.png";
 
-function hero() {
+function Hero() {
   return (
     <div className="bg-black text-white overflow-hidden">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 w-full max-w-screen-xl mx-auto px-4 py-16">
@@ -42,4 +42,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;
