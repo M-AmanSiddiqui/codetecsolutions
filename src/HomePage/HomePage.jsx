@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../Components/Header';
 import BgHero from './Components/BgHero';  // Adjusted the path to go up one level
-import Hero from '../Components/Hero';  // Path should be relative and case-sensitive
+import Hero from './Components/hero';  // Path should be relative and case-sensitive
  // Ensure case matches
   import HeroCard from './Components/HeroCard';
 import TypingCode from './Components/BgTypingCode';
