@@ -2,7 +2,7 @@ import React from 'react';
 import WebDevelopment from "../../assets/Images/WebDevelopment.jpg";
 import DesktopAppDevelopment from "../../assets/Images/Desktop Development.jpg";
 import AnimationUIandUX from "../../assets/Images/animation-ux.jpg";
-
+import { Link } from 'react-router-dom';
 function ServicesCard() {
   return (
     <div className="bg-black text-white pt-32">
@@ -48,9 +48,9 @@ function ServicesCard() {
       </div>
 
       <div className="flex justify-center items-center mt-6">
-        <button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 font-bold border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] text-base mt-4 md:mt-0 text-black">
+        <Link to="/Services" ><button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 font-bold border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] text-base mt-4 md:mt-0 text-black">
           View All
-        </button>
+        </button></Link>
       </div>
     </div>
   );

@@ -83,11 +83,11 @@ function Header() {
             {/* Dropdown Menu */}
             {isOpen && (
               <div className="absolute top-full left-0 bg-white text-sm text-black shadow-lg rounded-md w-52 mt-1 z-50">
-                      <Link to="/Software Development" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+                      <Link to="/SoftwareDevelopment" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
     Software Development
   </Link>
             
-                <Link to="/Mobile App Development" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
+                <Link to="/MobileAppDevelopment" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">
     Mobile App Development
   </Link>
   <Link to="/Ecommerce" className="block font-semibold px-5 py-4 p-24 hover:bg-black hover:text-[#91BE7F]">

@@ -7,6 +7,7 @@ import Services from "./Services/Services";
 import Contact from "./Contact/Contact";
 import GraphicDesigning from "./GraphicDesigning/GraphicDesigning";
 import Ecommerce from "./E-Commerce/Ecommerce"
+import MobileAppDevelopment from "./MobileAppDevelopment/MobileAppDevelopment";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
@@ -18,6 +19,7 @@ ReactDOM.createRoot(root).render(
       <Route path="/Contact" element={<Contact />} />
       <Route path="/GraphicDesigning" element={< GraphicDesigning />} />
        <Route path="/Ecommerce" element={< Ecommerce />} />
+       <Route path="/MobileAppDevelopment" element={< MobileAppDevelopment />} />
     </Routes>
   </BrowserRouter>
 );
