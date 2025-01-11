@@ -8,16 +8,15 @@ import { useInView } from "react-intersection-observer";
  function SoftwareHero() {
   const [softwareRef, softwareInView] = useInView({ triggerOnce: true });
   const softwareAnimation = useSpring({
-    transform: softwareInView ? 'translateY(0)' : 'translateY(100px)',
-    opacity: softwareInView ? 1 : 0,
-    config: { duration: 1000 },
+    x: softwareInView ? 0 : 200, // Slide from the left
+    opacity: softwareInView ? 1 : 0, // Fade in
+    config: { duration: 900 },
   });
-
   const [MoreThanRef, MoreThanInView] = useInView({ triggerOnce: true });
   const MoreThanAnimation = useSpring({
     x: MoreThanInView ? 0 : -200, // Slide from the left
     opacity: MoreThanInView ? 1 : 0, // Fade in
-    config: { duration: 1000 },
+    config: { duration: 900 },
   });
   
   return (
@@ -68,8 +67,8 @@ import { useInView } from "react-intersection-observer";
           
             <div className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0"> {/* Adjusted margin-top */}
             <animated.div
-          ref={softwareRef}
-          style={softwareAnimation}
+          ref={MoreThanRef}
+          style={MoreThanAnimation}
           className="flex-1 text-center md:text-left space-y-6"
         >  <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
               More Than 10 Years Of Experience​
