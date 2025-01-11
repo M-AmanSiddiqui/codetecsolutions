@@ -2,11 +2,28 @@ import React from 'react'
 import Software1 from '../../assets/Images/Software1.mp4'
 import Software2 from '../../assets/Images/Software 2.png'
 import State from './State'
+import { useSpring, animated } from "@react-spring/web";
+import { useInView } from "react-intersection-observer";
+
  function SoftwareHero() {
+  const [softwareRef, softwareInView] = useInView({ triggerOnce: true });
+  const softwareAnimation = useSpring({
+    transform: softwareInView ? 'translateY(0)' : 'translateY(100px)',
+    opacity: softwareInView ? 1 : 0,
+    config: { duration: 1000 },
+  });
+
+  const [MoreThanRef, MoreThanInView] = useInView({ triggerOnce: true });
+  const MoreThanAnimation = useSpring({
+    x: MoreThanInView ? 0 : -200, // Slide from the left
+    opacity: MoreThanInView ? 1 : 0, // Fade in
+    config: { duration: 1000 },
+  });
+  
   return (
        <div className="bg-black w-full py-12 text-white">
                 
-    
+        
                 <h1 className="text-4xl md:text-4xl text-center font-bold font-serif mt-12 underline">
         SOFTWARE DEVELOPMENT
       </h1>
@@ -14,7 +31,8 @@ import State from './State'
           
              {/*Development */}
                 <div className="container mx-auto flex flex-col md:flex-row  px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-32">
-                     <div className="flex-1 flex justify-center">
+                    
+             <div className="flex-1 flex justify-center">
                            <video
                              className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto shadow-lg"
                              autoPlay
@@ -26,11 +44,15 @@ import State from './State'
                            </video>
                          </div>
                   <div className="flex-1 text-center md:text-left space-y-6">
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
+                  <animated.div
+          ref={softwareRef}
+          style={softwareAnimation}
+          className="flex-1 text-center md:text-left space-y-6"
+        >   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
                     DEVELOPMENT
                     </h2>
                     <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-                    A commitment to quality and forward-thinking in the realm of IT services and consulting, positioning CodeTec Solutions as a leader in creating solutions that are not just current but also geared towards future industry demands.</p> </div>
+                    A commitment to quality and forward-thinking in the realm of IT services and consulting, positioning CodeTec Solutions as a leader in creating solutions that are not just current but also geared towards future industry demands.</p> </animated.div></div>
                 </div>
            
               {/*More Than 10 Years Of Experience​ */}
@@ -45,11 +67,15 @@ import State from './State'
               </div>
           
             <div className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0"> {/* Adjusted margin-top */}
-              <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
+            <animated.div
+          ref={softwareRef}
+          style={softwareAnimation}
+          className="flex-1 text-center md:text-left space-y-6"
+        >  <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
               More Than 10 Years Of Experience​
               </h2>
               <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-              We understand that having a strong online presence is crucial for any business. That’s why we specialize in providing comprehensive development services that drive growth and success for your business.</p>
+              We understand that having a strong online presence is crucial for any business. That’s why we specialize in providing comprehensive development services that drive growth and success for your business.</p></animated.div>
            <State /> </div>
           </div>
           

@@ -1,12 +1,12 @@
 import React from 'react';
 import Header from '../Components/Header';
-import BgHero from './Components/BgHero';  // Adjusted the path to go up one level
-import Hero from './Components/hero';  // Path should be relative and case-sensitive
- // Ensure case matches
+import BgHero from './Components/BgHero';  
+import Hero from './Components/hero';  
   import HeroCard from './Components/HeroCard';
 import TypingCode from './Components/BgTypingCode';
 import ServicesCard from './Components/ServicesCard';
 import Footer from '../Components/Footer';
+
 
 function HomePage() {
   return (

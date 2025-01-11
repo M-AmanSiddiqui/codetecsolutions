@@ -2,6 +2,7 @@ import React from 'react'
 import App1 from '../../assets/Images/AppDevelopment1.mp4'
 import App2 from '../../assets/Images/AppDevelopment2.mp4'
 import App3 from '../../assets/Images/AppDevelopment3.mp4'
+
  function AppHero() {
   return (
      <div className="bg-black w-full py-16 text-white">
@@ -68,14 +69,29 @@ import App3 from '../../assets/Images/AppDevelopment3.mp4'
              <source src={App3} type="video/mp4" />
            </video>
          </div>
-      <div className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0"> {/* Adjusted margin-top */}
-        <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
-          DESIGNING & PRODUCTION
-        </h2>
-        <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
-          <span className="font-bold">At CodeTec Solutions</span> we design exceptional user experiences. Our skilled team creates intuitive interfaces that engage users and deliver impactful results. Enhance your digital products with our user-focused design expertise. Your journey to outstanding UI/UX begins here.
-        </p>
-      </div>
+         <div
+  className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0 md:ml-4 lg:ml-6"
+>
+  {/* Adjusted margin-top and added margin-left */}
+  <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
+    UI/UX Design for Mobile Apps
+  </h2>
+  <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
+    <span className="font-bold">UI/UX design </span> for mobile apps focuses on
+    creating visually appealing, user-friendly, and seamless experiences for
+    app users. While
+    <span className="font-bold">UI (User Interface) </span> deals with the app’s
+    visual elements and layout,
+    <span className="font-bold"> UX (User Experience) </span>ensures that users
+    can interact with the app effortlessly and achieve their goals effectively.
+    <br />
+    <br />
+    A well-designed UI/UX enhances user engagement, boosts retention, and
+    ensures customer satisfaction by making the app intuitive and enjoyable to
+    use.
+  </p>
+</div>
+
     </div>
     
     

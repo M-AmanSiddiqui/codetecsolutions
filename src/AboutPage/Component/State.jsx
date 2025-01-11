@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 function State() {
   // State for the counters
@@ -7,8 +8,16 @@ function State() {
   const [employees, setEmployees] = useState(0);
   const [hours, setHours] = useState(0);
 
+  // Intersection observer hook to track when the component is in view
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger only once when it comes into view
+    threshold: 0.1, // 10% of the component must be in view
+  });
+
   // Function to handle the counting effect
   useEffect(() => {
+    if (!inView) return;
+
     const duration = 2000; // Duration in milliseconds
     const incrementProjects = Math.ceil(80 / (duration / 60));
     const incrementClients = Math.ceil(80 / (duration / 60));
@@ -42,11 +51,14 @@ function State() {
     }, 50);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [inView]);
 
   return (
     <div className="bg-black py-20">
-      <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 text-center text-white">
+      <div
+        ref={ref}
+        className="container mx-auto grid grid-cols-2 md:grid-cols-4 text-center text-white"
+      >
         {/* Number of Projects */}
         <div className="space-y-2">
           <h2 className="text-4xl md:text-7xl font-bold text-[#91BE7F]">
