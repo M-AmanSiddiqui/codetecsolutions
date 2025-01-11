@@ -8,6 +8,12 @@ import { GoClockFill } from "react-icons/go";
 import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const handleMailClick = () => {
+    window.open("https://mail.google.com/mail/?view=cm&fs=1&to=contact@codetecsolutions.com", "_blank");
+  };
+  const openMap = () => {
+    window.open("https://www.google.com/maps?q=3998+E+71st+street,+Cleveland,+Ohio", "_blank");
+  };
   return (
     <footer className="bg-black text-white py-24">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -93,12 +99,15 @@ const Footer = () => {
           <h3 className="font-bold uppercase mb-4">Details</h3>
           <ul className="space-y-2">
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
-              <FaLocationArrow />
-              <span>contact@codetecsolutions.com</span>
+              <FaLocationArrow /><Link to="#" onClick={openMap}>
+        <span>3998 E 71st street, Cleveland, Ohio</span>
+      </Link>
             </li>
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
             <MdOutlineMailOutline />
-              <span>Email: contact@codetecsolutions.com</span>
+           <Link to="#" onClick={handleMailClick}>
+                  contact@codetecsolutions.com
+                </Link>
             </li>
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
               <FaPhone />

@@ -17,18 +17,27 @@ function Header() {
       setIsOpen(false); // Close the dropdown after the delay
     }, 1500); // 300ms delay
   };
-
+  const handleMailClick = () => {
+    window.open("https://mail.google.com/mail/?view=cm&fs=1&to=contact@codetecsolutions.com", "_blank");
+  };
+  const openMap = () => {
+    window.open("https://www.google.com/maps?q=3998+E+71st+street,+Cleveland,+Ohio", "_blank");
+  };
   return (
     <header className="text-gray-600 body-font fixed top-0 left-0 w-full bg-black shadow-lg z-50 overflow-hidden"> {/* Ensure z-index is high enough */}
       {/* Top info section */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
-        <h2 className="flex items-center gap-1 text-sm md:text-base">
-          <MdOutlineMailOutline />
-          contact@codetecsolutions.com
+        <h2 className="flex items-center gap-1 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
+          <MdOutlineMailOutline  />
+          <Link to="#" onClick={handleMailClick}>
+        contact@codetecsolutions.com
+      </Link>
         </h2>
-        <h2 className="flex items-center gap-2 text-sm md:text-base">
+        <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
           <FaLocationArrow />
-          3998 E 71st street, Cleveland, Ohio
+          <Link to="#" onClick={openMap}>
+        <span>3998 E 71st street, Cleveland, Ohio</span>
+      </Link>
         </h2>
       </div>
 
