@@ -7,7 +7,7 @@ function Services() {
   return (
     <div>
     <Header />
-    <div className="pt-44"> 
+    <div> 
         <BgService />
         <ServiceHero />
     <Footer />

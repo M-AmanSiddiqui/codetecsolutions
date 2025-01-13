@@ -8,7 +8,7 @@ import ClientsFeedback from './Component/ClientsFeedback';
   return (
     <div>
     <Header />
-    <div className="pt-44"> 
+    <div> 
        <SoftwareHero /><ServiceOffer /><ClientsFeedback />
     <Footer />
     </div>

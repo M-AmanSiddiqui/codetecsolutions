@@ -424,7 +424,7 @@ function Header() {
   };
 
   return (
-    <header className="text-gray-600 body-font fixed top-0 left-0 w-full bg-black shadow-lg z-50">
+    <header className="text-gray-600 body-font top-0 left-0 w-full bg-black shadow-lg ">
       {/* Top info section */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">

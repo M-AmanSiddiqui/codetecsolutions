@@ -4,8 +4,6 @@ import ServiceAppDevelopment from "../../assets/Images/Service AppDevelopment.jp
 import ServiceUIandUX from "../../assets/Images/UX-vs-UI-Design.jpeg";
 import ServiceEcommerce from "../../assets/Images/Service Ecommerce.png";
 import ServiceSoftwareMaintenance from "../../assets/Images/Service SoftwareMaintaines.jpg";
-import { useSpring, animated } from "@react-spring/web";
-import { useInView } from "react-intersection-observer";
 import heromain from "../../assets/Images/heromain.png";
 import { motion } from "framer-motion"; // Ensure motion is imported from framer-motion
 
@@ -15,11 +13,13 @@ function ServiceHero() {
         {/* Web Development */}
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8">
         <div className="flex-1">
-      <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+        <motion.div
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
         <img
           className="max-w-full h-auto shadow-md"
           src={ServiceWebDevelopment}
@@ -30,10 +30,12 @@ function ServiceHero() {
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               Web Development
             </h2>
@@ -48,18 +50,22 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <img className="max-w-full h-auto shadow-md" src={ServiceSoftwareDevelopment} alt="Hero" />
             </motion.div>  </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               Software Development
             </h2>
@@ -73,10 +79,12 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <img
               className="max-w-full h-auto shadow-md"
               src={ServiceAppDevelopment}
@@ -85,10 +93,12 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               Mobile App Development
             </h2>
@@ -102,10 +112,12 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <img
               className="max-w-full h-auto shadow-md"
               src={ServiceUIandUX}
@@ -114,10 +126,12 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               UI/UX Design
             </h2>
@@ -131,10 +145,12 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <img
               className="max-w-full h-auto shadow-md"
               src={ServiceEcommerce}
@@ -143,10 +159,12 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               E-commerce Solutions
             </h2>
@@ -160,10 +178,12 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-        initial={{ x: 300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <img
               className="max-w-full h-auto shadow-md"
               src={ServiceSoftwareMaintenance}
@@ -172,10 +192,12 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-        initial={{ x: -300, opacity: 0 }} // Start from the left
-        whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-        transition={{ duration: 1 }} // Optional: Add smooth transition duration
-      >
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+       
+        >
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold">
               Software Maintenance and Support
             </h2>

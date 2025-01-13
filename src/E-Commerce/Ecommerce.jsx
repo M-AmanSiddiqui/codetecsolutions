@@ -7,7 +7,7 @@ import EcommerceHero from './Component/EcommerceHero';
   return (
     <div>
     <Header />
-    <div className="pt-44"> 
+    <div> 
        <BgEcommerce />
 <EcommerceHero />
     <Footer />

@@ -6,7 +6,7 @@ import GraphicHero from './Components/GraphicHero';
   return (
     <div>
     <Header />
-    <div className="pt-44"> 
+    <div> 
        <GraphicHero />
     <Footer />
     </div>

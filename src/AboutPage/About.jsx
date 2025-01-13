@@ -8,7 +8,7 @@ function About() {
   return (
     <div>
     <Header />
-    <div className="pt-44"> {/* Adjust padding to account for fixed Header */}
+    <div> {/* Adjust padding to account for fixed Header */}
       <AboutHero /><State /><Footer />
     </div>
   </div>

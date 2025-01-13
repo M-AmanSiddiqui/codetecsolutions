@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div>
     <Header />
-    <div className="pt-44"> 
+    <div> 
         <ContactForm /> <Footer />
     </div>
   </div>
