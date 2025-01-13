@@ -1,7 +1,7 @@
 import React from 'react'
 import  Wordpress from "../../assets/Images/EcommerceWordpress.png"
 import  Shopify from "../../assets/Images/EcommerceShopify.png"
-import { motion } from "framer-motion"; // Ensure motion is imported from framer-motion
+import { motion } from "framer-motion"; 
 
 
  function EcommerceHero() {
@@ -12,10 +12,10 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
         {/* Text Content - Make it appear first on larger screens */}
         <div className="flex-1  md:text-left space-y-6 order-2md:order-1 mt-0">
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
-          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          initial={{ x: -300, opacity: 0 }}  
+          whileInView={{ x: 0, opacity: 1 }} 
+               
+          transition={{ duration: 0.7 }}      
           
         >
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
@@ -30,10 +30,10 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
         <div className="flex-1 flex justify-center order-1 md:order-2 mt-0">
           <div className="flex-1">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
-          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          initial={{ x: 300, opacity: 0 }}  
+          whileInView={{ x: 0, opacity: 1 }} 
+               
+          transition={{ duration: 0.7 }}      
           
         >
             <img
@@ -51,10 +51,10 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
     {/* Image Section */}
     <div className="flex justify-center md:justify-end flex-1">
     <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
-          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          initial={{ x: -300, opacity: 0 }}  
+          whileInView={{ x: 0, opacity: 1 }} 
+               
+          transition={{ duration: 0.7 }}      
           
         >
       <img
@@ -67,10 +67,10 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
     {/* Text Content */}
     <div className="flex-1 text-center md:text-left">
     <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
-          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          initial={{ x: 300, opacity: 0 }}  
+          whileInView={{ x: 0, opacity: 1 }} 
+               
+          transition={{ duration: 0.7 }}      
           
         >
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">

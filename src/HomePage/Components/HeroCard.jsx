@@ -16,18 +16,23 @@ function HeroCard() {
         <motion.div
           initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                 // Trigger animation only once when in view
+            
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
+          
           <Link to="/MobileAppDevelopment" className="hover:text-[#91BE7F]">
-            <img
+          <motion.div 
+
+     whileHover={{ scale: 1.1 }}  
+     style={{ originX: 0.5, originY: 0.5 }}
+  > <img
               src={WebDesigning}
               alt="Web Designing"
               className="w-full h-48 object-cover rounded-md"
-            />
+            /></motion.div>
             <h2 className="text-2xl font-bold mt-4">Web Designing</h2>
-          </Link>
+            </Link>
           <p className="text-gray-400 mt-2">
             Web designing involves creating customized, responsive, and visually
             appealing websites to enhance user experience and support business
@@ -43,11 +48,15 @@ function HeroCard() {
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/SoftwareDevelopment" className="hover:text-[#91BE7F]">
-            <img
+          <motion.div 
+
+     whileHover={{ scale: 1.1 }}  
+     style={{ originX: 0.5, originY: 0.5 }}
+  > <img
               src={SoftwareDevelopment}
               alt="Software Development"
               className="w-full h-48 object-cover rounded-md"
-            />
+            /></motion.div>
             <h2 className="text-2xl font-bold mt-4">Software Development</h2>
           </Link>
           <p className="text-gray-400 mt-2">
@@ -66,11 +75,15 @@ function HeroCard() {
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/GraphicDesigning" className="hover:text-[#91BE7F]">
-            <img
-              src={UiandUX}
-              alt="UI/UX Designing"
-              className="w-full h-48 object-cover rounded-md"
-            />
+          <motion.div 
+
+      whileHover={{ scale: 1.1 }}  
+     style={{ originX: 0.5, originY: 0.5 }}
+     > <img
+         src={UiandUX}
+         alt="UIandU"
+         className="w-full h-48 object-cover rounded-md"
+       /></motion.div>
             <h2 className="text-2xl font-bold mt-4">UI/UX Designing</h2>
           </Link>
           <p className="text-gray-400 mt-2">

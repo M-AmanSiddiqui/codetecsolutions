@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';  // Import motion for animations
 
 function ServicesCard() {
   return (
-    <div className="bg-black text-white pt-32">
+    <div className="bg-black text-white pt-32 overflow-x-hidden overflow-y-hidden">
       <h1 className="text-5xl text-center font-serif font-bold pt-4">
         Our Services
       </h1>
@@ -20,11 +20,16 @@ function ServicesCard() {
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
+               <motion.div 
+          
+                whileHover={{ scale: 1.1 }}  
+               style={{ originX: 0.5, originY: 0.5 }}
+               > 
           <img
             src={WebDevelopment}
             alt="WebDevelopment"
             className="w-full h-48 object-cover rounded-md"
-          />
+          /></motion.div>
           <h2 className="text-2xl font-bold mt-4">Web Development</h2>
           <p className="text-gray-400 mt-2">
             Elevate your online presence with our custom web development. We craft tailored solutions for performance and user engagement. Contact us today.
@@ -39,11 +44,16 @@ function ServicesCard() {
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
+           <motion.div 
+          
+          whileHover={{ scale: 1.1 }}  
+         style={{ originX: 0.5, originY: 0.5 }}
+         > 
           <img
             src={DesktopAppDevelopment}
             alt="DesktopAppDevelopment"
             className="w-full h-48 object-cover rounded-md"
-          />
+          /> </motion.div>
           <h2 className="text-2xl font-bold mt-4">Desktop App Development</h2>
           <p className="text-gray-400 mt-2">
             Boost productivity with tailored desktop apps. We deliver performance, security, and user-friendly design. Contact us today.
@@ -58,11 +68,15 @@ function ServicesCard() {
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
-          <img
+              <motion.div 
+          
+          whileHover={{ scale: 1.1 }}  
+         style={{ originX: 0.5, originY: 0.5 }}
+         > <img
             src={AnimationUIandUX}
             alt="AnimationUIandUX"
             className="w-full h-48 object-cover rounded-md"
-          />
+          />      </motion.div> 
           <h2 className="text-2xl font-bold mt-4">UI/UX Designing</h2>
           <p className="text-gray-400 mt-2">
             We conceptualize and design interfaces that not only enhance user experiences but also leave a lasting impact on your target audience. Let's create a digital experience that truly stands out.
