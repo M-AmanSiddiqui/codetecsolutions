@@ -9,30 +9,38 @@ function AboutHero() {
   // Animation for each section and image
   const [whoWeAreRef, whoWeAreInView] = useInView({ triggerOnce: true });
   const whoWeAreAnimation = useSpring({
-    transform: whoWeAreInView ? 'translateY(0)' : 'translateY(100px)',
-    opacity: whoWeAreInView ? 2 : 0,
-    config: { duration: 1000 },
+    transform: whoWeAreInView ? 'translateX(0)' : 'translateX(100px)', // Slide in from the right
+    opacity: whoWeAreInView ? 1 : 0, // Fade in
+    config: { duration: 800 },
+  });
+
+  const { ref, inView } = useInView({ triggerOnce: true });
+
+  const videoAnimation = useSpring({
+    x: inView ? 0 : -200, // Slide from the right (you can change to -200 for sliding from the left)
+    opacity: inView ? 1 : 0, // Fade in
+    config: { duration: 800 },
   });
 
   const [aboutRef, aboutInView] = useInView({ triggerOnce: true });
   const aboutAnimation = useSpring({
-    transform: aboutInView ? 'translateY(0)' : 'translateY(100px)',
+    transform: aboutInView ? 'translateX(0)' : 'translateX(-100px)', 
     opacity: aboutInView ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 800 },
   });
 
   const [missionRef, missionInView] = useInView({ triggerOnce: true });
   const missionAnimation = useSpring({
-    transform: missionInView ? 'translateY(0)' : 'translateY(100px)',
+    transform: missionInView ? 'translateX(0)' : 'translateX(100px)',
     opacity: missionInView ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 800 },
   });
 
   const [visionRef, visionInView] = useInView({ triggerOnce: true });
   const visionAnimation = useSpring({
-    transform: visionInView ? 'translateY(0)' : 'translateY(100px)',
+    transform: visionInView ? 'translateX(0)' : 'translateX(-100px)', 
     opacity: visionInView ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 800 },
   });
 
   // Image animations
@@ -47,14 +55,14 @@ function AboutHero() {
   const missionImageAnimation = useSpring({
     transform: missionImageInView ? 'translateX(0)' : 'translateX(-100px)', // image slides from the left
     opacity: missionImageInView ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 800 },
   });
 
   const [visionImageRef, visionImageInView] = useInView({ triggerOnce: true });
   const visionImageAnimation = useSpring({
     transform: visionImageInView ? 'translateX(0)' : 'translateX(100px)', // image slides from the right
     opacity: visionImageInView ? 1 : 0,
-    config: { duration: 1000 },
+    config: { duration: 800 },
   });
 
   return (
@@ -66,18 +74,18 @@ function AboutHero() {
 
       {/* Who We Are Section */}
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8">
-        {/* Video Section */}
-        <div className="flex-1 flex justify-center">
-          <video
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto shadow-lg"
-            autoPlay
-            loop
-            muted
-            playsInline
-          >
-            <source src={HeroImage} type="video/mp4" />
-          </video>
-        </div>
+      <div ref={ref} className="flex-1 flex justify-center">
+      <animated.video
+        style={videoAnimation}
+        className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto shadow-lg"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source src={HeroImage} type="video/mp4" />
+      </animated.video>
+    </div>
 
         {/* Text Content with Animation */}
         <animated.div

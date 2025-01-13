@@ -3,6 +3,8 @@ import WebDevelopment from "../../assets/Images/WebDevelopment.jpg";
 import DesktopAppDevelopment from "../../assets/Images/Desktop Development.jpg";
 import AnimationUIandUX from "../../assets/Images/animation-ux.jpg";
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';  // Import motion for animations
+
 function ServicesCard() {
   return (
     <div className="bg-black text-white pt-32">
@@ -10,7 +12,14 @@ function ServicesCard() {
         Our Services
       </h1>
       <div className="flex flex-wrap justify-center mt-10 gap-8">
-        <div className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        {/* Web Development Card */}
+        <motion.div
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+        >
           <img
             src={WebDevelopment}
             alt="WebDevelopment"
@@ -20,9 +29,16 @@ function ServicesCard() {
           <p className="text-gray-400 mt-2">
             Elevate your online presence with our custom web development. We craft tailored solutions for performance and user engagement. Contact us today.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        {/* Desktop App Development Card */}
+        <motion.div
+          initial={{ y: 200, opacity: 0 }}  // Start from the bottom
+          whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+        >
           <img
             src={DesktopAppDevelopment}
             alt="DesktopAppDevelopment"
@@ -32,9 +48,16 @@ function ServicesCard() {
           <p className="text-gray-400 mt-2">
             Boost productivity with tailored desktop apps. We deliver performance, security, and user-friendly design. Contact us today.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto">
+        {/* UI/UX Designing Card */}
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}  // Start from the right
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
+          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+        >
           <img
             src={AnimationUIandUX}
             alt="AnimationUIandUX"
@@ -44,7 +67,7 @@ function ServicesCard() {
           <p className="text-gray-400 mt-2">
             We conceptualize and design interfaces that not only enhance user experiences but also leave a lasting impact on your target audience. Let's create a digital experience that truly stands out.
           </p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="flex justify-center items-center mt-6">

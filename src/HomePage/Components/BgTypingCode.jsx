@@ -13,8 +13,9 @@ function TypingCode() {
       >
         <source src={BgTypingCode} type="video/mp4" />
       </video>
+
       
-      {/* You can add any content or overlay here if needed */}
+      {/* Add any content here (optional) */}
     </div>
   );
 }

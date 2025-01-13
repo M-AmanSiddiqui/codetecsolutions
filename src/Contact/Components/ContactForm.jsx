@@ -82,12 +82,12 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             rows="5"
-            className="w-full px-4 py-2 rounded-md   focus:outline-none"
+            className="w-full px-4 py-2 rounded-md text-black focus:outline-none"
             required
           ></textarea>
          <button
   type="submit"
-  className="inline-flex items-center justify-center bg-[#91BE7F] px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] text-base text-black font-bold w-full py-2 rounded-md transition"
+  className="inline-flex  items-center justify-center bg-[#91BE7F] px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] text-base text-black font-bold w-full py-2 rounded-md transition"
 >
   SEND MESSAGE
 </button>

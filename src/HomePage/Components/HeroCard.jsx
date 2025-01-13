@@ -3,9 +3,8 @@ import WebDesigning from "../../assets/Images/webdesign.jpg";
 import SoftwareDevelopment from "../../assets/Images/Software Development.jfif";
 import UiandUX from "../../assets/Images/UX-vs-UI-Design.jpeg";
 import { Link } from "react-router-dom";
-import * as motion from "motion/react-client";
+import { motion } from "framer-motion"; // Ensure motion is imported from framer-motion
 
-  
 function HeroCard() {
   return (
     <div className="bg-black text-white">
@@ -15,8 +14,10 @@ function HeroCard() {
       <div className="flex flex-wrap justify-center mt-10 gap-8">
         {/* Web Designing Card */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/MobileAppDevelopment" className="hover:text-[#91BE7F]">
@@ -35,9 +36,10 @@ function HeroCard() {
         </motion.div>
 
         {/* Software Development Card */}
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+        <motion.div initial={{ y: -200, opacity: 0 }}  // Start from the top
+          whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/SoftwareDevelopment" className="hover:text-[#91BE7F]">
@@ -57,8 +59,10 @@ function HeroCard() {
 
         {/* UI/UX Designing Card */}
         <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          initial={{ x: 300, opacity: 0 }}  // Start from the right
+          whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+          viewport={{ once: true }}           // Trigger animation only once when in view
+          transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/GraphicDesigning" className="hover:text-[#91BE7F]">

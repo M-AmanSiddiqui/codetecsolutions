@@ -35,13 +35,18 @@ function Hero() {
   return (
     <div className="bg-black text-white overflow-hidden">
       <div className="flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 w-full max-w-screen-xl mx-auto px-4 py-16">
+        
         {/* Hero Image with Scroll Animation */}
         <animated.div
           ref={imageRef}
           style={imageAnimation}
-          className="flex-1"
+          className="flex-1 max-w-full max-h-[70vh] sm:max-h-[60vh] md:max-h-[70vh] lg:max-h-[80vh] overflow-hidden"
         >
-          <img className="max-w-full h-auto rounded-lg" src={heromain} alt="Hero" />
+          <img
+            className="w-full h-full object-cover rounded-lg"
+            src={heromain}
+            alt="Hero"
+          />
         </animated.div>
 
         {/* Text Content */}
@@ -52,8 +57,10 @@ function Hero() {
             style={whoWeAreAnimation}
             className="space-y-5"
           >
-            <h1 className="text-3xl md:text-4xl font-serif font-bold">Who We Are?</h1>
-            <p className="text-base md:text-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold">
+              Who We Are?
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl">
               <span className="font-bold">CodeTec Solutions</span> is a dynamic software house that brings <br />
               digital solutions to life. With a focus on innovation and design, <br /> we specialize in crafting
               seamless web, mobile, and desktop <br /> applications. Our team is dedicated to curating exceptional
@@ -68,8 +75,10 @@ function Hero() {
             style={whatWeDoAnimation}
             className="space-y-5"
           >
-            <h1 className="text-3xl md:text-4xl font-serif font-bold">What We Do?</h1>
-            <p className="text-base md:text-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold">
+              What We Do?
+            </h1>
+            <p className="text-base sm:text-lg md:text-xl">
               At <span className="font-bold">CodeTec Solutions</span>, we transform ideas into powerful digital <br />
               solutions. We specialize in creating seamless web, mobile, and <br /> desktop applications designed
               to meet the unique needs of <br /> businesses. Our expertise extends to crafting captivating user <br />
