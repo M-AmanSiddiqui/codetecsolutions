@@ -19,7 +19,7 @@ function ClientsFeedback() {
           <motion.div
             initial={{ x: -300, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
-            viewport={{ once: true }} 
+      
             transition={{ duration: 0.7 }} 
             
           >
@@ -45,7 +45,7 @@ function ClientsFeedback() {
           <motion.div
             initial={{ y: 300, opacity: 0 }} 
             whileInView={{ y: 0, opacity: 1 }} 
-            viewport={{ once: true }} 
+      
             transition={{ duration: 0.7 }} 
             
           >
@@ -71,7 +71,7 @@ function ClientsFeedback() {
           <motion.div
             initial={{ x: 300, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
-            viewport={{ once: true }} 
+      
             transition={{ duration: 0.7 }} 
             
           >

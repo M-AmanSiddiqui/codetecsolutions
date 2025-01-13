@@ -17,7 +17,7 @@ function AppHero() {
         <div className="flex-1 md:text-left space-y-6"> <motion.div
           initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >
@@ -34,7 +34,7 @@ function AppHero() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >
@@ -57,7 +57,7 @@ function AppHero() {
         <motion.div
           initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >
@@ -77,7 +77,7 @@ function AppHero() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >
@@ -97,7 +97,7 @@ function AppHero() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >
@@ -117,7 +117,7 @@ function AppHero() {
         <motion.div
           initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           
         >

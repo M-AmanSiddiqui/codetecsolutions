@@ -16,7 +16,7 @@ function ServicesCard() {
         <motion.div
           initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
@@ -35,7 +35,7 @@ function ServicesCard() {
         <motion.div
           initial={{ y: 200, opacity: 0 }}  // Start from the bottom
           whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
@@ -54,7 +54,7 @@ function ServicesCard() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}  // Start from the right
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-          viewport={{ once: true }}           // Trigger animation only once when in view
+                // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
           className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
         >
