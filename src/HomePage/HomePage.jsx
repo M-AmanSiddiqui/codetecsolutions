@@ -1,11 +1,11 @@
 import React from 'react';
 import Header from '../Components/Header';
-import BgHero from './Components/BgHero';  
-import Hero from './Components/hero';  
+import BgHero from './Components/BgHero';    
   import HeroCard from './Components/HeroCard';
 import TypingCode from './Components/BgTypingCode';
 import ServicesCard from './Components/ServicesCard';
 import Footer from '../Components/Footer';
+import Hero from './Components/hero';
 
 
 function HomePage() {
