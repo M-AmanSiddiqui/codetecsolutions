@@ -536,7 +536,7 @@ function Header() {
         
           <div className="flex justify-center mt-4 md:mt-0">
             <Link to="/Contact">
-              <button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg text-base text-black font-bold">
+              <button className="inline-flex items-center bg-[#91BE7F] p-2 text-xs sm:py-4 sm:px-6 font-bold border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg sm:text-base text-black font-bold">
                 Request A Quote
               </button>
             </Link>
