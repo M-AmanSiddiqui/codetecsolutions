@@ -24,7 +24,7 @@ function AboutHero() {
   
   // Function to determine the x value based on screen size
   const getXValue = () => {
-    if (screenWidth >= 1280) {
+    if (screenWidth >= 1280) {  
       return -80; // For xl
     } else if (screenWidth >= 1024) {
       return -50; // For lg
