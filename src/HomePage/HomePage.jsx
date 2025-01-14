@@ -5,7 +5,7 @@ import BgHero from './Components/BgHero';
 import TypingCode from './Components/BgTypingCode';
 import ServicesCard from './Components/ServicesCard';
 import Footer from '../Components/Footer';
-import Hero from './Components/hero';
+import Hero from './Components/Hero';
 
 
 function HomePage() {
