@@ -9,7 +9,7 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
 
 function ServiceHero() {
     return (
-      <div className="bg-black w-full py-16 text-white">
+      <div className="bg-black w-full py-16 text-white ">
         {/* Web Development */}
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8">
         <div className="flex-1">
@@ -29,7 +29,7 @@ function ServiceHero() {
       </motion.div>
     </div>
           {/* Text Content */}
-          <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
+          <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8 ">
           <motion.div
           initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center

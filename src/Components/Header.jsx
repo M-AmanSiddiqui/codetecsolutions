@@ -366,14 +366,13 @@
 
 
 
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationArrow, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Images/logo.jpg";
 import { motion } from "framer-motion";
+
 function Header() {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the menu visibility
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to handle dropdown visibility
@@ -390,10 +389,7 @@ function Header() {
     setIsServicesClicked(true); // Mark services as clicked
   };
 
-  
-
   const handleMouseLeave = () => {
-    // Close the dropdown after a delay when mouse leaves
     setTimeout(() => {
       if (!isServicesClicked) {
         setIsDropdownOpen(false); // Close the dropdown after delay if services is not clicked
@@ -414,21 +410,20 @@ function Header() {
       {/* Top info section */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-          
-             <motion.div
-             initial={{ x: -300, opacity: 0 }} // Start animation from the right
-             whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-             transition={{ duration: 0.7 }} // Animation duration
+          <motion.div
+            initial={{ x: -300, opacity: 0 }} // Start animation from the right
+            whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+            transition={{ duration: 0.7 }} // Animation duration
             className="flex items-center space-x-2"
           >
             <MdOutlineMailOutline />
             <Link to="#" onClick={handleMailClick}>
               contact@codetecsolutions.com
             </Link>
-            </motion.div>
+          </motion.div>
         </h2>
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-        <motion.div
+          <motion.div
             initial={{ x: 300, opacity: 0 }} // Start animation from the right
             whileInView={{ x: 0, opacity: 1 }} // Animate to the center
             transition={{ duration: 0.7 }} // Animation duration
@@ -438,7 +433,7 @@ function Header() {
             <Link to="#" onClick={openMap}>
               <span>3998 E 71st street, Cleveland, Ohio</span>
             </Link>
-            </motion.div>
+          </motion.div>
         </h2>
       </div>
 
@@ -453,22 +448,21 @@ function Header() {
           />
         </Link>
 
-        <div className="flex items-center gap-6 md:gap-8">
+        <div className="flex items-center pl- gap-6 md:gap-8 ">
           {/* Mobile Hamburger Icon */}
           <button onClick={toggleMenu} className="text-white md:hidden block">
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
-          <div className="relative z-50">
+          <div className="relative z-50 w-full">
             {/* Navigation Links */}
             <nav
-               className={`${
+              className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row items-center justify-center gap-6 md:gap-8 bg-black text-white fixed md:relative md:flex left-0 top-  md:h-auto`}
-            
-           >
+              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0 w-full pb-4 top-40 md:h-auto`}
+            >
               <Link
                 to="/"
-                className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold"
+                className="text-white hover:text-[#91BE7F] sm:hover:border-b-4 sm:hover:border-[#91BE7F] font-bold"
                 onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
               >
                 Home
@@ -478,19 +472,20 @@ function Header() {
               <div className="relative">
                 <button
                   className="text-lg font-semibold hover:text-gray-300 flex items-center"
-                 
                 >
-                  <Link to= "/Services">
-
-                  <span className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold">
-                    Services
-                  </span></Link>
-                  <span  onClick={toggleDropdown}  className="ml-1">&#9662;</span>
+                  <Link to="/Services">
+                    <span className="text-white hover:text-[#91BE7F] sm:hover:border-b-4 sm:hover:border-[#91BE7F] font-bold">
+                      Services
+                    </span>
+                  </Link>
+                  <span onClick={toggleDropdown} className="ml-1">
+                    &#9662;
+                  </span>
                 </button>
 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className="absolute top-full left-0 bg-white text-sm text-black shadow-lg rounded-md w-52 mt-1 z-50">
+                  <div className=" relative sm:absolute sm:text-black sm:bg-white top-full left-0 bg-black text-sm text-white shadow-lg rounded-md w-52 mt-1 z-50">
                     <Link
                       to="/SoftwareDevelopment"
                       className="block font-semibold px-5 py-4 hover:bg-black hover:text-[#91BE7F]"
@@ -521,14 +516,14 @@ function Header() {
 
               <Link
                 to="/About"
-                className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold"
+                className="text-white hover:text-[#91BE7F] sm:hover:border-b-4 sm:hover:border-[#91BE7F] font-bold"
                 onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
               >
                 About Us
               </Link>
               <Link
                 to="/Contact"
-                className="text-white hover:text-[#91BE7F] hover:border-b-4 hover:border-[#91BE7F] font-bold"
+                className="text-white hover:text-[#91BE7F] sm:hover:border-b-4 sm:hover:border-[#91BE7F] font-bold"
                 onClick={() => setIsDropdownOpen(false)} // Close dropdown on click
               >
                 Contact
@@ -537,26 +532,19 @@ function Header() {
           </div>
         </div>
 
-        {/* Request A Quote Button */}
-        <div className="flex justify-center mt-4 md:mt-0">
-  <Link to="/Contact">
-    <button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg text-base text-black font-bold md:inline-flex hidden">
-      Request A Quote
-    </button>
-  </Link>
-</div>
-
+        {/* Request A Quote Button (only visible in the mobile menu) */}
+        
+          <div className="flex justify-center mt-4 md:mt-0">
+            <Link to="/Contact">
+              <button className="inline-flex items-center bg-[#91BE7F] py-3 px-5 border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg text-base text-black font-bold">
+                Request A Quote
+              </button>
+            </Link>
+          </div>
+       
       </div>
     </header>
   );
 }
 
 export default Header;
-
-
-
-
-
-
-
-
