@@ -16,10 +16,11 @@ function SoftwareHero() {
       <div className="container mx-auto flex flex-col md:flex-row px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-32">
         <div className="flex-1 flex justify-center">
           <motion.div
-            initial={{ x: -300, opacity: 0 }} 
+            initial={{ x: -40, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
             transition={{ duration: 1 }} 
-                        
+            whileHover={{ scale: 1.1 }} // Hover effect
+            style={{ originX: 0.5, originY: 0.5 }}         
           >
             <video
               className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto shadow-lg"
@@ -34,7 +35,7 @@ function SoftwareHero() {
         </div>
         <div className="flex-1 text-center md:text-left space-y-6">
           <motion.div
-            initial={{ x: 300, opacity: 0 }} 
+            initial={{ x: 40, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
             transition={{ duration: 1 }} 
                         
@@ -54,10 +55,11 @@ function SoftwareHero() {
         {/* Image Section */}
         <div className="flex justify-center md:justify-end flex-1">
           <motion.div
-            initial={{ x: 300, opacity: 0 }} 
+            initial={{ x: 40, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
             transition={{ duration: 1 }} 
-                        
+            whileHover={{ scale: 1.1 }} // Hover effect
+            style={{ originX: 0.5, originY: 0.5 }}           
           >
             <img
               className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg h-auto"
@@ -69,7 +71,7 @@ function SoftwareHero() {
 
         <div className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0">
           <motion.div
-            initial={{ x: -300, opacity: 0 }} 
+            initial={{ x: -40, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
             transition={{ duration: 1 }} 
                         

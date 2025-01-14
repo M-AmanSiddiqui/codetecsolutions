@@ -59,7 +59,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link to="/Mobile App Development" className="hover:text-[#91BE7F]">
+              <Link to="/MobileAppDevelopment" className="hover:text-[#91BE7F]">
                 Mobile App Development
               </Link>
             </li>

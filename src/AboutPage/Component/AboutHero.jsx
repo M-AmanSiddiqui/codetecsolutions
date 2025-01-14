@@ -2,98 +2,78 @@ import HeroImage from "../../assets/Images/About Hero.mp4";
 import HeroLaptop from "../../assets/Images/Laptop.jpg";
 import OurMission from "../../assets/Images/Our Mission Image.jpg";
 import OurVision from "../../assets/Images/Our Vision.jpg";
-import { useSpring, animated } from "@react-spring/web";
-import { useInView } from "react-intersection-observer";
+import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 function AboutHero() {
-  // Animation for each section and image
-  const [whoWeAreRef, whoWeAreInView] = useInView({ triggerOnce: true });
-  const whoWeAreAnimation = useSpring({
-    transform: whoWeAreInView ? 'translateX(0)' : 'translateX(100px)', // Slide in from the right
-    opacity: whoWeAreInView ? 1 : 0, // Fade in
-    config: { duration: 800 },
-  });
-
-  const { ref, inView } = useInView({ triggerOnce: true });
-
-  const videoAnimation = useSpring({
-    x: inView ? 0 : -200, // Slide from the right (you can change to -200 for sliding from the left)
-    opacity: inView ? 1 : 0, // Fade in
-    config: { duration: 800 },
-  });
-
-  const [aboutRef, aboutInView] = useInView({ triggerOnce: true });
-  const aboutAnimation = useSpring({
-    transform: aboutInView ? 'translateX(0)' : 'translateX(-100px)', 
-    opacity: aboutInView ? 1 : 0,
-    config: { duration: 800 },
-  });
-
-  const [missionRef, missionInView] = useInView({ triggerOnce: true });
-  const missionAnimation = useSpring({
-    transform: missionInView ? 'translateX(0)' : 'translateX(100px)',
-    opacity: missionInView ? 1 : 0,
-    config: { duration: 800 },
-  });
-
-  const [visionRef, visionInView] = useInView({ triggerOnce: true });
-  const visionAnimation = useSpring({
-    transform: visionInView ? 'translateX(0)' : 'translateX(-100px)', 
-    opacity: visionInView ? 1 : 0,
-    config: { duration: 800 },
-  });
-
-  // Image animations
-  const [heroImageRef, heroImageInView] = useInView({ triggerOnce: true });
-  const heroImageAnimation = useSpring({
-    transform: heroImageInView ? 'translateX(0)' : 'translateX(100px)', // image slides from the right
-    opacity: heroImageInView ? 1 : 0,
-    config: { duration: 1000 },
-  });
-
-  const [missionImageRef, missionImageInView] = useInView({ triggerOnce: true });
-  const missionImageAnimation = useSpring({
-    transform: missionImageInView ? 'translateX(0)' : 'translateX(-100px)', // image slides from the left
-    opacity: missionImageInView ? 1 : 0,
-    config: { duration: 800 },
-  });
-
-  const [visionImageRef, visionImageInView] = useInView({ triggerOnce: true });
-  const visionImageAnimation = useSpring({
-    transform: visionImageInView ? 'translateX(0)' : 'translateX(100px)', // image slides from the right
-    opacity: visionImageInView ? 1 : 0,
-    config: { duration: 800 },
-  });
+  
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  
+  // Update screenWidth on window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+  
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+  
+  // Function to determine the x value based on screen size
+  const getXValue = () => {
+    if (screenWidth >= 1280) {
+      return -80; // For xl
+    } else if (screenWidth >= 1024) {
+      return -50; // For lg
+    } else if (screenWidth >= 900) {
+      return -30; // For between 900px and 1024px
+    } else if (screenWidth >= 770) {
+      return -10; // For between 770px and 900px
+    } else if (screenWidth >= 650) {
+      return 0;  // No overflow for screens under 650px
+    } 
+  };
 
   return (
-    <div className="bg-black w-full py-16 text-white">
+    <div className="bg-black w-full py-16 text-white sm:overflow-hidden">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl text-center font-bold font-serif mb-20 underline">
         ABOUT US
       </h1>
 
       {/* Who We Are Section */}
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8">
-      <div ref={ref} className="flex-1 flex justify-center">
-      <animated.video
-        style={videoAnimation}
-        className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto shadow-lg"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={HeroImage} type="video/mp4" />
-      </animated.video>
-    </div>
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between md:space-y-0 md:space-x-8">
+        <div className="flex-1 flex justify-center max-w-full overflow-hidden">
+          <motion.video
+            initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+            whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+            whileHover={{ scale: 1.1 }}
+            style={{ originX: 0.5, originY: 0.5 }}
+            transition={{
+              duration: 0.7, // Smooth entry
+              whileHover: { type: "spring", stiffness: 300 },
+            }}
+            className="w-full max-w-full sm:max-w-sm md:max-w-lg lg:max-w-xl h-auto shadow-lg"
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            <source src={HeroImage} type="video/mp4" />
+          </motion.video>
+        </div>
 
         {/* Text Content with Animation */}
-        <animated.div
-          ref={whoWeAreRef}
-          style={whoWeAreAnimation}
-          className="flex-1 text-center md:text-left space-y-6"
+        <motion.div
+          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          transition={{ duration: 0.7 }}
+          className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
             Who We Are?
           </h2>
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
@@ -105,28 +85,32 @@ function AboutHero() {
             grow and thrive. At CodeTec Solutions, we are shaping the future of
             the digital world.
           </p>
-        </animated.div>
+        </motion.div>
       </div>
 
       {/* About CodeTec Solutions */}
-      <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
-        <animated.div
-          ref={heroImageRef}
-          style={heroImageAnimation}
+      <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
+        <motion.div
+          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          whileHover={{ scale: 1.1 }}
+          style={{ originX: 0.5, originY: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="flex-1"
         >
           <img
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto rounded-lg shadow-md"
+            className="w-full sm:max-w-md md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto rounded-lg shadow-md"
             src={HeroLaptop}
             alt="Hero"
           />
-        </animated.div>
-        <animated.div
-          ref={aboutRef}
-          style={aboutAnimation}
-          className="flex-1 text-center md:text-left space-y-6"
+        </motion.div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}  // Start from the bottom
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          transition={{ duration: 0.7 }}
+          className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
+          <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
             About CodeTec Solutions
           </h2>
           <p className="text-sm sm:text-base lg:text-lg leading-relaxed">
@@ -139,26 +123,30 @@ function AboutHero() {
             combines innovation, expertise, and a client-first approach to
             deliver exceptional results.
           </p>
-        </animated.div>
+        </motion.div>
       </div>
 
       {/* Our Mission */}
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
-        <animated.div
-          ref={missionImageRef}
-          style={missionImageAnimation}
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
+        <motion.div
+          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          whileHover={{ scale: 1.1 }}
+          style={{ originX: 0.5, originY: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="flex-1"
         >
           <img
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto rounded-lg shadow-md"
+            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto rounded-lg shadow-md"
             src={OurMission}
             alt="Our Mission"
           />
-        </animated.div>
-        <animated.div
-          ref={missionRef}
-          style={missionAnimation}
-          className="flex-1 text-center md:text-left space-y-6"
+        </motion.div>
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}  // Start from the bottom
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          transition={{ duration: 0.7 }}
+          className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
             Our Mission
@@ -171,26 +159,30 @@ function AboutHero() {
             websites, applications, and software that drive growth, enhance user
             experiences, and foster long-term success for our clients.
           </p>
-        </animated.div>
+        </motion.div>
       </div>
 
       {/* Our Vision */}
-      <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
-        <animated.div
-          ref={visionImageRef}
-          style={visionImageAnimation}
+      <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-4 md:px-8 lg:px-16 space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
+        <motion.div
+          initial={{ x: 50, opacity: 0 }}  // Start from the left
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          whileHover={{ scale: 1.1 }}
+          style={{ originX: 0.5, originY: 0.5 }}
+          transition={{ duration: 0.7 }}
           className="flex-1"
         >
           <img
-            className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl h-auto rounded-lg shadow-md"
+            className="w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto rounded-lg shadow-md"
             src={OurVision}
             alt="Our Vision"
           />
-        </animated.div>
-        <animated.div
-          ref={visionRef}
-          style={visionAnimation}
-          className="flex-1 text-center md:text-left space-y-6"
+        </motion.div>
+        <motion.div
+          initial={{ x: getXValue(), opacity: 0 }} // Start from the bottom
+          whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
+          transition={{ duration: 0.7 }}
+          className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
             Our Vision
@@ -205,7 +197,7 @@ function AboutHero() {
             combines innovation, expertise, and a client-first approach to
             deliver exceptional results.
           </p>
-        </animated.div>
+        </motion.div>
       </div>
     </div>
   );

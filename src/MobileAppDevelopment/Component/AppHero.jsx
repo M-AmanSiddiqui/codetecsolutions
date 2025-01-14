@@ -15,10 +15,10 @@ function AppHero() {
         {/* Text Content - Make it appear first on smaller screens */}
         
         <div className="flex-1 md:text-left space-y-6"> <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                     // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
@@ -32,10 +32,11 @@ function AppHero() {
         {/* Video Section */}
         <div className="flex-1 flex justify-center">
         <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                    // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}     // Trigger animation only once when in view
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <video
@@ -55,10 +56,11 @@ function AppHero() {
         {/* Video Section */}
         <div className="flex-1 flex justify-center">
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                    // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}         // Trigger animation only once when in view
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <video
@@ -75,10 +77,10 @@ function AppHero() {
         {/* Text Content */}
         <div className="flex-1 text-center md:text-left space-y-6">
         <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                     // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-bold">
@@ -95,10 +97,11 @@ function AppHero() {
         {/* Video Section */}
         <div className="flex-1 flex justify-center">
         <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                    // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}    // Trigger animation only once when in view
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <video
@@ -115,10 +118,10 @@ function AppHero() {
         {/* Text Content */}
         <div className="flex-1 md:text-left space-y-6 order-2 md:order-1 mt-6 md:mt-0 md:ml-4 lg:ml-6">
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -40, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                     // Trigger animation only once when in view
-          transition={{ duration: 0.7 }}      // Animation duration
+          transition={{ duration: 1 }}      // Animation duration
           
         >
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">

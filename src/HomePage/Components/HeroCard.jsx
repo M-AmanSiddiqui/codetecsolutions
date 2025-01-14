@@ -14,7 +14,7 @@ function HeroCard() {
       <div className="flex flex-wrap justify-center mt-10 gap-8">
         {/* Web Designing Card */}
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -20, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
             
           transition={{ duration: 0.7 }}      // Animation duration
@@ -41,7 +41,7 @@ function HeroCard() {
         </motion.div>
 
         {/* Software Development Card */}
-        <motion.div initial={{ y: -200, opacity: 0 }}  // Start from the top
+        <motion.div initial={{ y: -20, opacity: 0 }}  // Start from the top
           whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
                  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -68,7 +68,7 @@ function HeroCard() {
 
         {/* UI/UX Designing Card */}
         <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the right
+          initial={{ x: 20, opacity: 0 }}  // Start from the right
           whileInView={{ x: 0, opacity: 1 }} // Animate to the center
                  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration

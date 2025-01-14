@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <div className="bg-black text-white overflow-hidden">
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 w-full max-w-screen-2xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 py-16">
+    <div className="bg-black text-white overflow-x-hidden overflow-hidden"> {/* Prevent horizontal overflow */}
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between space-y-8 md:space-y-0 w-full max-w-screen-2xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 2xl:px-24 py-16">
         {/* Hero Image with Scroll Animation */}
         <motion.div
-          initial={{ x: -300, opacity: 0 }} // Start animation from the left
+          initial={{ x: -20, opacity: 0 }} // Start animation from the left (default for mobile)
           whileInView={{ x: 0, opacity: 1 }} // Animate to the center
           transition={{ duration: 0.7 }} // Animation duration
           whileHover={{ scale: 1.1 }} // Hover effect
@@ -26,7 +26,7 @@ function Hero() {
         <div className="flex-1 space-y-12">
           {/* Who We Are Section */}
           <motion.div
-            initial={{ x: 300, opacity: 0 }} // Start animation from the right
+            initial={{ x: 20, opacity: 0 }} // Start animation from the right (default for mobile)
             whileInView={{ x: 0, opacity: 1 }} // Animate to the center
             transition={{ duration: 0.7 }} // Animation duration
             className="space-y-5"
@@ -35,8 +35,8 @@ function Hero() {
               Who We Are?
             </h1>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
-              <span className="font-bold">CodeTec Solutions</span> is a dynamic software house that brings <br />
-              digital solutions to life. With a focus on innovation and design, <br /> we specialize in crafting seamless web,
+              <span className="font-bold">CodeTec Solutions</span> is a dynamic software house that brings
+              <br /> digital solutions to life. With a focus on innovation and design, <br /> we specialize in crafting seamless web,
               mobile, and desktop <br /> applications. Our team is dedicated to curating exceptional <br /> user experiences
               while leveraging digital marketing to help <br /> businesses grow and thrive. At Codetec, we are shaping the <br />
               future of the digital world.
@@ -45,7 +45,7 @@ function Hero() {
 
           {/* What We Do Section */}
           <motion.div
-            initial={{ x: 300, opacity: 0 }} // Start animation from the right
+            initial={{ x: 20, opacity: 0 }} // Start animation from the right (default for mobile)
             whileInView={{ x: 0, opacity: 1 }} // Animate to the center
             transition={{ duration: 0.7 }} // Animation duration
           >

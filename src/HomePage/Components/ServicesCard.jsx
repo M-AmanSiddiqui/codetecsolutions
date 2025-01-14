@@ -14,7 +14,7 @@ function ServicesCard() {
       <div className="flex flex-wrap justify-center mt-10 gap-8">
         {/* Web Development Card */}
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -20, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -38,7 +38,7 @@ function ServicesCard() {
 
         {/* Desktop App Development Card */}
         <motion.div
-          initial={{ y: 200, opacity: 0 }}  // Start from the bottom
+          initial={{ y: 20, opacity: 0 }}  // Start from the bottom
           whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -62,7 +62,7 @@ function ServicesCard() {
 
         {/* UI/UX Designing Card */}
         <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the right
+          initial={{ x: 20, opacity: 0 }}  // Start from the right
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration

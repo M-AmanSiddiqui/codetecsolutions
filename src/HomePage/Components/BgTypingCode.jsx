@@ -2,6 +2,7 @@ import React from 'react';
 import BgTypingCode from "../../assets/Images/Typing Code.mp4";
 
 function TypingCode() {
+
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
       <video

@@ -14,9 +14,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8">
         <div className="flex-1">
         <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}    // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -30,7 +31,7 @@ function ServiceHero() {
           {/* Text Content */}
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -50,9 +51,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -60,7 +62,7 @@ function ServiceHero() {
             </motion.div>  </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -100, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -79,9 +81,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -100, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -93,7 +96,7 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -112,9 +115,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }} // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -126,7 +130,7 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -100, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -145,9 +149,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -100, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}      // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -159,7 +164,7 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pl-8">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
@@ -178,9 +183,10 @@ function ServiceHero() {
         <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-16">
           <div className="flex-1">
           <motion.div
-          initial={{ x: 300, opacity: 0 }}  // Start from the left
+          initial={{ x: 80, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
-                  // Trigger animation only once when in view
+          whileHover={{ scale: 1.1 }} // Hover effect
+          style={{ originX: 0.5, originY: 0.5 }}     // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
        
         >
@@ -192,7 +198,7 @@ function ServiceHero() {
           </div>
           <div className="flex-1 text-center md:text-left space-y-6 mt-6 md:mt-0 md:pr-8">
           <motion.div
-          initial={{ x: -300, opacity: 0 }}  // Start from the left
+          initial={{ x: -100, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                   // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration

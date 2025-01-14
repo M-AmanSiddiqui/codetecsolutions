@@ -373,9 +373,7 @@ import { Link } from "react-router-dom";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { FaLocationArrow, FaBars, FaTimes } from "react-icons/fa";
 import logo from "../assets/Images/logo.jpg";
-import { useSpring, animated } from "@react-spring/web";
-import { useInView } from "react-intersection-observer";
-
+import { motion } from "framer-motion";
 function Header() {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the menu visibility
   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to handle dropdown visibility
@@ -392,19 +390,7 @@ function Header() {
     setIsServicesClicked(true); // Mark services as clicked
   };
 
-  const [mailRef, mailInView] = useInView({ triggerOnce: true });
-  const mailAnimation = useSpring({
-    x: mailInView ? 0 : -200, // Slide from the left
-    opacity: mailInView ? 1 : 0, // Fade in
-    config: { duration: 1000 },
-  });
-
-  const [addressRef, addressInView] = useInView({ triggerOnce: true });
-  const addressAnimation = useSpring({
-    x: addressInView ? 0 : 200, // Slide from the right
-    opacity: addressInView ? 1 : 0, // Fade in
-    config: { duration: 1000 },
-  });
+  
 
   const handleMouseLeave = () => {
     // Close the dropdown after a delay when mouse leaves
@@ -428,28 +414,31 @@ function Header() {
       {/* Top info section */}
       <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-          <animated.div
-            ref={mailRef}
-            style={mailAnimation}
+          
+             <motion.div
+             initial={{ x: -300, opacity: 0 }} // Start animation from the right
+             whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+             transition={{ duration: 0.7 }} // Animation duration
             className="flex items-center space-x-2"
           >
             <MdOutlineMailOutline />
             <Link to="#" onClick={handleMailClick}>
               contact@codetecsolutions.com
             </Link>
-          </animated.div>
+            </motion.div>
         </h2>
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-          <animated.div
-            ref={addressRef}
-            style={addressAnimation}
+        <motion.div
+            initial={{ x: 300, opacity: 0 }} // Start animation from the right
+            whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+            transition={{ duration: 0.7 }} // Animation duration
             className="flex items-center space-x-2"
           >
             <FaLocationArrow />
             <Link to="#" onClick={openMap}>
               <span>3998 E 71st street, Cleveland, Ohio</span>
             </Link>
-          </animated.div>
+            </motion.div>
         </h2>
       </div>
 
