@@ -6,12 +6,18 @@ import State from './Component/State';
 
 function About() {
   return (
-    <div>
-    <Header />
-    <div> {/* Adjust padding to account for fixed Header */}
-      <AboutHero /><State /><Footer />
-    </div>
+   
+
+
+<div className="overflow-x-hidden">
+  <Header />
+  <div>
+    <AboutHero />
+    <State />
+    <Footer />
   </div>
+</div>
+
   )
 }
 export default About;

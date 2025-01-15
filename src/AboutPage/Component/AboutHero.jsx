@@ -38,7 +38,7 @@ function AboutHero() {
   };
 
   return (
-    <div className="bg-black w-full py-16 text-white sm:overflow-hidden">
+    <div className="bg-black w-full py-16 text-white sm:overflow-hidden overflow-x-hidden">
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl text-center font-bold font-serif mb-20 underline">
         ABOUT US

@@ -54,7 +54,7 @@ function State() {
   }, [inView]);
 
   return (
-    <div className="bg-black py-20">
+    <div className="bg-black">
       <div
         ref={ref}
         className="container mx-auto grid grid-cols-2 md:grid-cols-4 text-center text-white"

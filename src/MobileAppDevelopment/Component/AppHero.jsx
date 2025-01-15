@@ -141,12 +141,11 @@
 
 // export default AppHero;
 
-
-import React, { useState, useEffect, useRef } from 'react';
-import App1 from '../../assets/Images/AppDevelopment1.mp4';
-import App2 from '../../assets/Images/AppDevelopment2.mp4';
-import App3 from '../../assets/Images/AppDevelopment3.mp4';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect, useRef } from "react";
+import App1 from "../../assets/Images/AppDevelopment1.mp4";
+import App2 from "../../assets/Images/AppDevelopment2.mp4";
+import App3 from "../../assets/Images/AppDevelopment3.mp4";
+import { motion } from "framer-motion";
 
 function AppHero() {
   const [activeSection, setActiveSection] = useState(null);
@@ -169,13 +168,13 @@ function AppHero() {
   }, []);
 
   return (
-    <div className="bg-black w-full py-16 text-white">
+    <div className="bg-black w-full py-16 text-white overflow-x-hidden">
       {/* Custom Mobile App Development */}
       <div
         id="section1"
         ref={(el) => (sectionsRef.current[0] = el)}
         className={`container mx-auto flex flex-col-reverse md:flex-row px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 pt-0 transition-all duration-500 ${
-          activeSection === 'section1' ? 'opacity-100 scale-100' : 'opacity-50 scale-95'
+          activeSection === "section1" ? "opacity-100 scale-100" : "opacity-50 scale-95"
         }`}
       >
         <div className="flex-1 md:text-left space-y-6">
@@ -188,7 +187,12 @@ function AppHero() {
               Custom Mobile App Development
             </h2>
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed mt-6">
-            Custom mobile app development is the process of creating tailored mobile applications designed specifically to meet the unique needs, goals, and challenges of a business or individual. Unlike off-the-shelf solutions, these apps are built from scratch and are fully customizable, ensuring they align with the client’s requirements, brand identity, and target audience.
+              Custom mobile app development is the process of creating tailored
+              mobile applications designed specifically to meet the unique
+              needs, goals, and challenges of a business or individual. Unlike
+              off-the-shelf solutions, these apps are built from scratch and
+              are fully customizable, ensuring they align with the client’s
+              requirements, brand identity, and target audience.
             </p>
           </motion.div>
         </div>
@@ -218,7 +222,7 @@ function AppHero() {
         id="section2"
         ref={(el) => (sectionsRef.current[1] = el)}
         className={`container mx-auto flex flex-col-reverse md:flex-row px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-32 transition-all duration-500 ${
-          activeSection === 'section2' ? 'opacity-100 scale-100' : 'opacity-50 scale-95'
+          activeSection === "section2" ? "opacity-100 scale-100" : "opacity-50 scale-95"
         }`}
       >
         <div className="flex-1 flex justify-center">
@@ -250,9 +254,14 @@ function AppHero() {
               Cross-Platform App Development
             </h2>
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed mt-6">
-            Cross-platform app development is the process of building mobile applications that can run seamlessly on multiple operating systems, such as <span className='font-bold'>iOS, </span> <span className='font-bold'>Android, </span> and <span className='font-bold'>Windows,</span> using a single codebase. This approach reduces development time, cost, and effort while ensuring consistency across platforms.
-          </p>
-            
+              Cross-platform app development is the process of building mobile
+              applications that can run seamlessly on multiple operating
+              systems, such as <span className="font-bold">iOS, </span>
+              <span className="font-bold">Android, </span> and{" "}
+              <span className="font-bold">Windows,</span> using a single
+              codebase. This approach reduces development time, cost, and
+              effort while ensuring consistency across platforms.
+            </p>
           </motion.div>
         </div>
       </div>
@@ -262,7 +271,7 @@ function AppHero() {
         id="section3"
         ref={(el) => (sectionsRef.current[2] = el)}
         className={`container mx-auto flex flex-col-reverse md:flex-row-reverse px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 mt-32 transition-all duration-500 ${
-          activeSection === 'section3' ? 'opacity-100 scale-100' : 'opacity-50 scale-95'
+          activeSection === "section3" ? "opacity-100 scale-100" : "opacity-50 scale-95"
         }`}
       >
         <div className="flex-1 flex justify-center">
@@ -294,11 +303,20 @@ function AppHero() {
               UI/UX Design for Mobile Apps
             </h2>
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed mt-6">
-             <span className="font-bold">UI/UX design </span> for mobile apps focuses on creating visually appealing, user-friendly, and seamless experiences for app users. While <span className="font-bold">UI (User Interface) </span> deals with the app’s visual elements and layout, <span className="font-bold">UX (User Experience) </span> ensures that users can interact with the app effortlessly and achieve their goals effectively.
-             <br />
-             <br />
-             A well-designed UI/UX enhances user engagement, boosts retention, and ensures customer satisfaction by making the app intuitive and enjoyable to use.
-           </p>
+              <span className="font-bold">UI/UX design </span> for mobile apps
+              focuses on creating visually appealing, user-friendly, and
+              seamless experiences for app users. While{" "}
+              <span className="font-bold">UI (User Interface) </span> deals with
+              the app’s visual elements and layout,{" "}
+              <span className="font-bold">UX (User Experience) </span> ensures
+              that users can interact with the app effortlessly and achieve
+              their goals effectively.
+              <br />
+              <br />
+              A well-designed UI/UX enhances user engagement, boosts retention,
+              and ensures customer satisfaction by making the app intuitive and
+              enjoyable to use.
+            </p>
           </motion.div>
         </div>
       </div>
@@ -307,4 +325,3 @@ function AppHero() {
 }
 
 export default AppHero;
-

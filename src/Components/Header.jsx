@@ -458,7 +458,7 @@ function Header() {
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0 w-full pb-4 top-40 md:h-auto`}
+              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-40 md:h-auto`}
             >
               <Link
                 to="/"
