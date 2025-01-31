@@ -51,7 +51,7 @@ function Hero() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold leading-tight text-[#91BE7F]">
               What We Do?
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mt-6">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mt-4">
               At <span className="font-bold">CodeTec Solutions</span>, we transform ideas into powerful digital <br />
               solutions. We specialize in creating seamless web, mobile, and <br /> desktop applications designed to meet the
               unique needs of <br /> businesses. Our expertise extends to crafting captivating user <br /> experiences and
