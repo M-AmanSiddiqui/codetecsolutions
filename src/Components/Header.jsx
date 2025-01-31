@@ -459,7 +459,7 @@ function Header() {
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-28 w-full md:h-auto`}
+              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-20 w-full md:h-auto`}
             >
               <Link
                 to="/"
@@ -535,7 +535,7 @@ function Header() {
 
         {/* Request A Quote Button (only visible in the mobile menu) */}
         
-          <div className="flex justify-center mt-4 md:mt-0">
+          <div className="flex justify-center mt-3 md:mt-0">
             <Link to="/Contact">
               <button className="inline-flex items-center  bg-[#91BE7F] p-2 text-xs sm:py-4 sm:px-6  border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg sm:text-base text-black font-bold">
                 Request A Quote
