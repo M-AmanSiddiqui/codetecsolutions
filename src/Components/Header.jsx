@@ -406,36 +406,37 @@ function Header() {
   };
 
   return (
-    <header className="text-gray-600 body-font h-32  top-0 sm:h-36 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
+    <header className="text-gray-600 body-font h-20  top-0 sm:h-28 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
       {/* Top info section */}
-      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 ">
-        <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-          <motion.div
-            initial={{ x: -300, opacity: 0 }} // Start animation from the right
-            whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-            transition={{ duration: 0.7 }} // Animation duration
-            className="flex items-center space-x-2"
-          >
-            <MdOutlineMailOutline />
-            <Link to="#" onClick={handleMailClick}>
-              contact@codetecsolutions.com
-            </Link>
-          </motion.div>
-        </h2>
-        <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
-          <motion.div
-            initial={{ x: 300, opacity: 0 }} // Start animation from the right
-            whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-            transition={{ duration: 0.7 }} // Animation duration
-            className="flex items-center space-x-2"
-          >
-            <FaLocationArrow />
-            <Link to="#" onClick={openMap}>
-              <span>3998 E 71st street, Cleveland, Ohio</span>
-            </Link>
-          </motion.div>
-        </h2>
-      </div>
+      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 sm:hidden">
+  <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
+    <motion.div
+      initial={{ x: -300, opacity: 0 }} // Start animation from the right
+      whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+      transition={{ duration: 0.7 }} // Animation duration
+      className="flex items-center space-x-2"
+    >
+      <MdOutlineMailOutline />
+      <Link to="#" onClick={handleMailClick}>
+        contact@codetecsolutions.com
+      </Link>
+    </motion.div>
+  </h2>
+  <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
+    <motion.div
+      initial={{ x: 300, opacity: 0 }} // Start animation from the right
+      whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+      transition={{ duration: 0.7 }} // Animation duration
+      className="flex items-center space-x-2"
+    >
+      <FaLocationArrow />
+      <Link to="#" onClick={openMap}>
+        <span>3998 E 71st street, Cleveland, Ohio</span>
+      </Link>
+    </motion.div>
+  </h2>
+</div>
+
 
       {/* Main Header Content */}
       <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between">
@@ -458,7 +459,7 @@ function Header() {
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-32 w-full md:h-auto`}
+              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-28 w-full md:h-auto`}
             >
               <Link
                 to="/"
