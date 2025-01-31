@@ -6,7 +6,7 @@ import ServiceOffer from './Component/ServiceOffer';
 import ClientsFeedback from './Component/ClientsFeedback';
  function SoftwareDevelopment() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
     <Header />
     <div> 
        <SoftwareHero /><ServiceOffer /><ClientsFeedback />

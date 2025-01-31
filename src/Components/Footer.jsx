@@ -14,7 +14,7 @@ const Footer = () => {
     window.open("https://www.google.com/maps?q=3998+E+71st+street,+Cleveland,+Ohio", "_blank");
   };
   return (
-    <footer className="bg-black text-white py-24">
+    <footer className="bg-black text-white py-24 overflow-x-hidden">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Company Info */}
         <div>

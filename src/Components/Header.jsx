@@ -406,12 +406,12 @@ function Header() {
   };
 
   return (
-    <header className="text-gray-600 body-font h-32  top-0 sm:h-28 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
+    <header className="text-gray-600 body-font h-20 pt-4  top-0 sm:h-28 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg overflow-x-hidden">
       {/* Top info section */}
-      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 sm:hidden  md:flex">
+      <div className="hidden md:flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2">
   <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
     <motion.div
-      initial={{ x: -300, opacity: 0 }} // Start animation from the right
+      initial={{ x: -300, opacity: 0 }} // Start animation from the left
       whileInView={{ x: 0, opacity: 1 }} // Animate to the center
       transition={{ duration: 0.7 }} // Animation duration
       className="flex items-center space-x-2"
@@ -436,7 +436,6 @@ function Header() {
     </motion.div>
   </h2>
 </div>
-
 
 
       {/* Main Header Content */}

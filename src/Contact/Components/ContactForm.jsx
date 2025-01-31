@@ -45,7 +45,7 @@ const ContactForm = () => {
     window.open("https://www.google.com/maps?q=3998+E+71st+street,+Cleveland,+Ohio", "_blank");
   };
   return (
-<div className="bg-black text-white p-8 ">
+<div className="bg-black text-white p-8 overflow-x-hidden">
 
 
 <div className="flex-col md:flex-row max-w-8xl mx-auto p-8 flex justify-center items-center  bg-black text-black">

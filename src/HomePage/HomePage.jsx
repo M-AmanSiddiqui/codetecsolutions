@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from '../Components/Header';
 import BgHero from './Components/BgHero';    
   import HeroCard from './Components/HeroCard';
@@ -10,7 +9,7 @@ import Hero from './Components/Hero';
 
 function HomePage() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <div>
         <Header />
         <BgHero />

@@ -3,7 +3,7 @@ import Footer from '..//Components/Footer';
 import GraphicHero from './Components/GraphicHero';
  function GraphicDesigning() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
     <Header />
     <div> 
        <GraphicHero />
