@@ -33,16 +33,16 @@ const Footer = () => {
           </p>
           {/* Social Icons */}
           <div className="flex space-x-4 text-4xl mt-6">
-            <Link to="#" className="text-white hover:text-[#91BE7F]">
+            <Link to="https://www.facebook.com/profile.php?id=61571021003531" className="text-white hover:text-[#91BE7F]">
               <FaFacebookSquare />
             </Link>
-            <Link to="#" className="text-white hover:text-[#91BE7F]">
+            <Link to="https://www.instagram.com/codetec_sulutions/" className="text-white hover:text-[#91BE7F]">
               <FaInstagramSquare />
             </Link>
             <Link to="#" className="text-white hover:text-[#91BE7F]">
               <FaTwitterSquare />
             </Link>
-            <Link to="#" className="text-white hover:text-[#91BE7F]">
+            <Link to="https://www.linkedin.com/company/codetecsolutions/" className="text-white hover:text-[#91BE7F]">
               <FaLinkedin />
             </Link>
           </div>
