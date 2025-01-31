@@ -406,9 +406,9 @@ function Header() {
   };
 
   return (
-    <header className="text-gray-600 body-font h-20  top-0 sm:h-28 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
+    <header className="text-gray-600 body-font h-32  top-0 sm:h-28 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
       {/* Top info section */}
-      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 sm:hidden">
+      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 sm:hidden  md:flex">
   <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
     <motion.div
       initial={{ x: -300, opacity: 0 }} // Start animation from the right
@@ -438,8 +438,9 @@ function Header() {
 </div>
 
 
+
       {/* Main Header Content */}
-      <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between sm:pt-5">
         {/* Logo */}
         <Link className="flex items-center text-gray-900  md:mb-0">
           <img
