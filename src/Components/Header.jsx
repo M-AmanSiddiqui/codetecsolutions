@@ -406,9 +406,9 @@ function Header() {
   };
 
   return (
-    <header className="text-gray-600 body-font top-0 left-0 w-full bg-black shadow-lg ">
+    <header className="text-gray-600 body-font h-32  top-0 sm:h-36 md:h-36 lg:h-44 left-0 w-full bg-black shadow-lg ">
       {/* Top info section */}
-      <div className="flex flex-col md:flex-row gap-4 justify-center items-center text-slate-200 py-2 px-3">
+      <div className="flex flex-col md:flex-row gap-2 justify-center items-center text-slate-200 py-2 ">
         <h2 className="flex items-center gap-2 text-sm md:text-base text-white hover:text-[#91BE7F] hover:border-[#91BE7F]">
           <motion.div
             initial={{ x: -300, opacity: 0 }} // Start animation from the right
@@ -438,27 +438,27 @@ function Header() {
       </div>
 
       {/* Main Header Content */}
-      <div className="container mx-auto flex flex-wrap p-4 md:flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between">
         {/* Logo */}
-        <Link className="flex items-center text-gray-900 mb-4 md:mb-0">
+        <Link className="flex items-center text-gray-900  md:mb-0">
           <img
             src={logo}
             alt="Logo"
-            className="w-28 h-12 sm:w-36 sm:h-16 md:w-44 md:h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-28"
+            className="w-28 h-12 sm:w-36 sm:h-16 md:w-44 lg:-ml-9 md:h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-28"
           />
         </Link>
 
-        <div className="flex items-center pl- gap-6 md:gap-8 ">
+        <div className="flex   gap-6 md:gap-8 ">
           {/* Mobile Hamburger Icon */}
           <button onClick={toggleMenu} className="text-white md:hidden block">
-            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
           <div className="relative z-50 w-full">
             {/* Navigation Links */}
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-40 md:h-auto`}
+              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-32 w-full md:h-auto`}
             >
               <Link
                 to="/"
@@ -536,7 +536,7 @@ function Header() {
         
           <div className="flex justify-center mt-4 md:mt-0">
             <Link to="/Contact">
-              <button className="inline-flex items-center bg-[#91BE7F] p-2 text-xs sm:py-4 sm:px-6  border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg sm:text-base text-black font-bold">
+              <button className="inline-flex items-center  bg-[#91BE7F] p-2 text-xs sm:py-4 sm:px-6  border-black hover:bg-black hover:text-[#91BE7F] border-2 hover:border-[#91BE7F] rounded-lg sm:text-base text-black font-bold">
                 Request A Quote
               </button>
             </Link>
