@@ -1,4 +1,4 @@
-import React from 'react';
+
 import BgCoding from "../../assets/Images/BgService.mp4"
 
 function BgService() {

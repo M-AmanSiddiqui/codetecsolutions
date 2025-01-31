@@ -1,4 +1,3 @@
-import React from 'react'
 import  Wordpress from "../../assets/Images/EcommerceWordpress.png"
 import  Shopify from "../../assets/Images/EcommerceShopify.png"
 import { motion } from "framer-motion"; 
@@ -12,10 +11,10 @@ import { motion } from "framer-motion";
         {/* Text Content - Make it appear first on larger screens */}
         <div className="flex-1  md:text-left space-y-6 order-2md:order-1 mt-0">
         <motion.div
-          initial={{ x: -40, opacity: 0 }}  
+          initial={{ x: -300, opacity: 0 }}  
           whileInView={{ x: 0, opacity: 1 }} 
                
-          transition={{ duration: 1 }}      
+          transition={{ duration: 0.7 }}      
           
         >
           <h2 className="text-2xl sm:text-3xl lg:text-3xl font-serif font-bold">
@@ -30,11 +29,11 @@ import { motion } from "framer-motion";
         <div className="flex-1 flex justify-center order-1 md:order-2 mt-0">
           <div className="flex-1">
           <motion.div
-          initial={{ x: 40, opacity: 0 }}  
+          initial={{ x: 300, opacity: 0 }}  
           whileInView={{ x: 0, opacity: 1 }} 
           whileHover={{ scale: 1.1 }} // Hover effect
           style={{ originX: 0.5, originY: 0.5 }}
-          transition={{ duration: 1 }}      
+          transition={{ duration: 0.7 }}      
           
         >
             <img
@@ -52,11 +51,11 @@ import { motion } from "framer-motion";
     {/* Image Section */}
     <div className="flex justify-center md:justify-end flex-1">
     <motion.div
-          initial={{ x: -40, opacity: 0 }}  
+          initial={{ x: -300, opacity: 0 }}  
           whileInView={{ x: 0, opacity: 1 }} 
           whileHover={{ scale: 1.1 }} // Hover effect
           style={{ originX: 0.5, originY: 0.5 }}     
-          transition={{ duration: 1 }}      
+          transition={{ duration: 0.7 }}      
           
         >
       <img
@@ -69,10 +68,10 @@ import { motion } from "framer-motion";
     {/* Text Content */}
     <div className="flex-1 text-center md:text-left">
     <motion.div
-          initial={{ x: 40, opacity: 0 }}  
+          initial={{ x: 300, opacity: 0 }}  
           whileInView={{ x: 0, opacity: 1 }} 
                
-          transition={{ duration: 1 }}      
+          transition={{ duration: 0.7 }}      
           
         >
       <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">

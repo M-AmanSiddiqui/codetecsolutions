@@ -1,4 +1,3 @@
-import React from "react";
 import WebDesigning from "../../assets/Images/webdesign.jpg";
 import SoftwareDevelopment from "../../assets/Images/Software Development.jfif";
 import UiandUX from "../../assets/Images/UX-vs-UI-Design.jpeg";
@@ -11,14 +10,14 @@ function HeroCard() {
       <h1 className="text-5xl text-center font-serif pt-8 font-bold">
         We can help you with
       </h1>
-      <div className="flex flex-wrap justify-center mt-10 gap-8">
+      <div className="flex flex-wrap justify-center mt-10">
         {/* Web Designing Card */}
         <motion.div
-          initial={{ x: -20, opacity: 0 }}  // Start from the left
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
             
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
           
           <Link to="/MobileAppDevelopment" className="hover:text-[#91BE7F]">
@@ -41,11 +40,11 @@ function HeroCard() {
         </motion.div>
 
         {/* Software Development Card */}
-        <motion.div initial={{ y: -20, opacity: 0 }}  // Start from the top
+        <motion.div initial={{ y: -300, opacity: 0 }}  // Start from the top
           whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
                  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/SoftwareDevelopment" className="hover:text-[#91BE7F]">
           <motion.div 
@@ -68,11 +67,11 @@ function HeroCard() {
 
         {/* UI/UX Designing Card */}
         <motion.div
-          initial={{ x: 20, opacity: 0 }}  // Start from the right
+          initial={{ x: 300, opacity: 0 }}  // Start from the right
           whileInView={{ x: 0, opacity: 1 }} // Animate to the center
                  // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
           <Link to="/GraphicDesigning" className="hover:text-[#91BE7F]">
           <motion.div 

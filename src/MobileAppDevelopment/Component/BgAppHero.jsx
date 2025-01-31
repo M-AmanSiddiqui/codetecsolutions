@@ -1,4 +1,3 @@
-import React from 'react';
 import bgappHero from '../../assets/Images/BgAppDevelopment.mp4'; 
 
 function BgAppHero() {

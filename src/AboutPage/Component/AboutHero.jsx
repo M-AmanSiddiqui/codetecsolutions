@@ -3,39 +3,13 @@ import HeroLaptop from "../../assets/Images/Laptop.jpg";
 import OurMission from "../../assets/Images/Our Mission Image.jpg";
 import OurVision from "../../assets/Images/Our Vision.jpg";
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+
 
 function AboutHero() {
   
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
   
-  // Update screenWidth on window resize
-  useEffect(() => {
-    const handleResize = () => {
-      setScreenWidth(window.innerWidth);
-    };
   
-    window.addEventListener('resize', handleResize);
-    
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-  
-  // Function to determine the x value based on screen size
-  const getXValue = () => {
-    if (screenWidth >= 1280) {  
-      return -80; // For xl
-    } else if (screenWidth >= 1024) {
-      return -50; // For lg
-    } else if (screenWidth >= 900) {
-      return -30; // For between 900px and 1024px
-    } else if (screenWidth >= 770) {
-      return -10; // For between 770px and 900px
-    } else if (screenWidth >= 650) {
-      return 0;  // No overflow for screens under 650px
-    } 
-  };
 
   return (
     <div className="bg-black w-full py-16 text-white sm:overflow-hidden overflow-x-hidden">
@@ -48,7 +22,7 @@ function AboutHero() {
       <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between md:space-y-0 md:space-x-8">
         <div className="flex-1 flex justify-center max-w-full overflow-hidden">
           <motion.video
-            initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+            initial={{ x: -300, opacity: 0 }} // Start from the left
             whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
             whileHover={{ scale: 1.1 }}
             style={{ originX: 0.5, originY: 0.5 }}
@@ -68,7 +42,7 @@ function AboutHero() {
 
         {/* Text Content with Animation */}
         <motion.div
-          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          initial={{ x: 300, opacity: 0 }} // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           transition={{ duration: 0.7 }}
           className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto"
@@ -91,7 +65,7 @@ function AboutHero() {
       {/* About CodeTec Solutions */}
       <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
         <motion.div
-          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          initial={{ x: 300, opacity: 0 }} // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           whileHover={{ scale: 1.1 }}
           style={{ originX: 0.5, originY: 0.5 }}
@@ -105,7 +79,7 @@ function AboutHero() {
           />
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}  // Start from the bottom
+          initial={{ x: -300, opacity: 0 }}  // Start from the bottom
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           transition={{ duration: 0.7 }}
           className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-lg xl:max-w-2xl mx-auto"
@@ -129,7 +103,7 @@ function AboutHero() {
       {/* Our Mission */}
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 md:px-8 lg:px-16 space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
         <motion.div
-          initial={{ x: getXValue(), opacity: 0 }} // Start from the left
+          initial={{ x: -300, opacity: 0 }} // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           whileHover={{ scale: 1.1 }}
           style={{ originX: 0.5, originY: 0.5 }}
@@ -143,7 +117,7 @@ function AboutHero() {
           />
         </motion.div>
         <motion.div
-          initial={{ x: 50, opacity: 0 }}  // Start from the bottom
+          initial={{ x: 300, opacity: 0 }}  // Start from the bottom
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           transition={{ duration: 0.7 }}
           className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"
@@ -165,7 +139,7 @@ function AboutHero() {
       {/* Our Vision */}
       <div className="container mx-auto flex flex-col-reverse md:flex-row-reverse items-center justify-between px-4 md:px-8 lg:px-16 space-y-5 sm:space-y-5 md:space-y-0 md:space-x-8 mt-16">
         <motion.div
-          initial={{ x: 50, opacity: 0 }}  // Start from the left
+          initial={{ x: 300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           whileHover={{ scale: 1.1 }}
           style={{ originX: 0.5, originY: 0.5 }}
@@ -179,7 +153,7 @@ function AboutHero() {
           />
         </motion.div>
         <motion.div
-          initial={{ x: getXValue(), opacity: 0 }} // Start from the bottom
+          initial={{ x: -300, opacity: 0 }} // Start from the bottom
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
           transition={{ duration: 0.7 }}
           className="flex-1 text-center md:text-left space-y-6 max-w-full sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl mx-auto"

@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../assets/Images/logo.jpg";
 import { Link } from "react-router-dom";
 import { MdOutlineMailOutline } from "react-icons/md";

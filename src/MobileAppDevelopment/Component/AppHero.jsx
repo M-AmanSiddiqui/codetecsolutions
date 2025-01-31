@@ -141,7 +141,7 @@
 
 // export default AppHero;
 
-import React, { useState, useEffect, useRef } from "react";
+import  { useState, useEffect, useRef } from "react";
 import App1 from "../../assets/Images/AppDevelopment1.mp4";
 import App2 from "../../assets/Images/AppDevelopment2.mp4";
 import App3 from "../../assets/Images/AppDevelopment3.mp4";
@@ -179,7 +179,7 @@ function AppHero() {
       >
         <div className="flex-1 md:text-left space-y-6">
           <motion.div
-            initial={{ x: -40, opacity: 0 }}
+            initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
@@ -198,7 +198,7 @@ function AppHero() {
         </div>
         <div className="flex-1 flex justify-center">
           <motion.div
-            initial={{ x: 40, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             style={{ originX: 0.5, originY: 0.5 }}
@@ -227,7 +227,7 @@ function AppHero() {
       >
         <div className="flex-1 flex justify-center">
           <motion.div
-            initial={{ x: -40, opacity: 0 }}
+            initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             style={{ originX: 0.5, originY: 0.5 }}
@@ -246,7 +246,7 @@ function AppHero() {
         </div>
         <div className="flex-1 text-center md:text-left space-y-6">
           <motion.div
-            initial={{ x: 40, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
@@ -276,7 +276,7 @@ function AppHero() {
       >
         <div className="flex-1 flex justify-center">
           <motion.div
-            initial={{ x: 40, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             style={{ originX: 0.5, originY: 0.5 }}
@@ -295,7 +295,7 @@ function AppHero() {
         </div>
         <div className="flex-1 md:text-left space-y-6">
           <motion.div
-            initial={{ x: -40, opacity: 0 }}
+            initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >

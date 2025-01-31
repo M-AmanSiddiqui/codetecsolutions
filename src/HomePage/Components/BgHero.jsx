@@ -1,4 +1,3 @@
-import React from 'react';
 import bgHero from '../../assets/Images/bgHero.mp4'; // Import the video file
 
 function BgHero() {

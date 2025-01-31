@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion";
 
 function ClientsFeedback() {
@@ -17,10 +16,10 @@ function ClientsFeedback() {
         {/* Business Owner */}
         <div className="w-full sm:w-1/3 space-y-4 mb-8 sm:mb-0">
           <motion.div
-            initial={{ x: -40, opacity: 0 }} 
+            initial={{ x: -300, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
       
-            transition={{ duration: 1.3 }} 
+            transition={{ duration: 0.7 }} 
             
           >
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-[#91BE7F]">
@@ -43,10 +42,10 @@ function ClientsFeedback() {
         {/* Web App Development */}
         <div className="w-full sm:w-1/3 space-y-4 mb-8 sm:mb-0">
           <motion.div
-            initial={{ y: 40, opacity: 0 }} 
+            initial={{ y: 300, opacity: 0 }} 
             whileInView={{ y: 0, opacity: 1 }} 
       
-            transition={{ duration: 1.3 }} 
+            transition={{ duration: 0.7 }} 
             
           >
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-[#91BE7F]">
@@ -69,10 +68,10 @@ function ClientsFeedback() {
         {/* Mobile App Development */}
         <div className="w-full sm:w-1/3 space-y-4">
           <motion.div
-            initial={{ x: 40, opacity: 0 }} 
+            initial={{ x: 300, opacity: 0 }} 
             whileInView={{ x: 0, opacity: 1 }} 
       
-            transition={{ duration: 1.3 }} 
+            transition={{ duration: 0.7 }} 
             
           >
             <h1 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-[#91BE7F]">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from "framer-motion"; 
 
 function ServiceOffer() {
@@ -17,9 +16,9 @@ function ServiceOffer() {
       <div className="pt-12 px-4 sm:px-8 lg:px-24 gap-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         
         <motion.div
-          initial={{ x: -40, opacity: 0 }}
+          initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
           
         >   
           {/* Web Development */}
@@ -34,9 +33,9 @@ function ServiceOffer() {
         </motion.div>
 
         <motion.div
-          initial={{ y: -40, opacity: 0 }} 
+          initial={{ y: -300, opacity: 0 }} 
           whileInView={{ y: 0, opacity: 1 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
           
         > 
           {/* Web App Development */}
@@ -51,9 +50,9 @@ function ServiceOffer() {
         </motion.div>
 
         <motion.div
-          initial={{ y: 40, opacity: 0 }} 
+          initial={{ y: 300, opacity: 0 }} 
           whileInView={{ y: 0, opacity: 1 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
           
         > 
           {/* Mobile App Development */}
@@ -68,9 +67,9 @@ function ServiceOffer() {
         </motion.div>
 
         <motion.div
-          initial={{ x: 40, opacity: 0 }} 
+          initial={{ x: 300, opacity: 0 }} 
           whileInView={{ x: 0, opacity: 1 }} 
-          transition={{ duration: 1 }}
+          transition={{ duration: 0.7 }}
           
         > 
           {/* Desktop Application Development */}

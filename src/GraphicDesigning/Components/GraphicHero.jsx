@@ -118,7 +118,7 @@
 import Graphic1 from "../../assets/Images/gaphic 1.jpg";
 import Graphic2 from "../../assets/Images/Graphic2.jpg";
 import Graphic3 from "../../assets/Images/Graphic3.webp";
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
 function GraphicHero() {
@@ -155,7 +155,7 @@ function GraphicHero() {
         {/* Content */}
         <motion.div
          
-            initial={{ x: -40, opacity: 0 }}  
+            initial={{ x: -300, opacity: 0 }}  
             whileInView={{ x: 0, opacity: 1 }} 
               
             transition={{ duration: 0.7 }} 
@@ -172,7 +172,7 @@ function GraphicHero() {
 
         {/* Image */}
         <motion.div
-          initial={{ x: 40, opacity: 0 }}  
+          initial={{ x: 300, opacity: 0 }}  
                     whileInView={{ x: 0, opacity: 1 }} 
                     whileHover={{ scale: 1.1 }} Hover effect
                     style={{ originX: 0.5, originY: 0.5 }}     

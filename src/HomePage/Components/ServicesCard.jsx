@@ -1,4 +1,3 @@
-import React from 'react';
 import WebDevelopment from "../../assets/Images/WebDevelopment.jpg";
 import DesktopAppDevelopment from "../../assets/Images/Desktop Development.jpg";
 import AnimationUIandUX from "../../assets/Images/animation-ux.jpg";
@@ -11,14 +10,14 @@ function ServicesCard() {
       <h1 className="text-5xl text-center font-serif font-bold pt-4">
         Our Services
       </h1>
-      <div className="flex flex-wrap justify-center mt-10 gap-8">
+      <div className="flex flex-wrap justify-center mt-10">
         {/* Web Development Card */}
         <motion.div
-          initial={{ x: -20, opacity: 0 }}  // Start from the left
+          initial={{ x: -300, opacity: 0 }}  // Start from the left
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
                <motion.div 
           
@@ -38,11 +37,11 @@ function ServicesCard() {
 
         {/* Desktop App Development Card */}
         <motion.div
-          initial={{ y: 20, opacity: 0 }}  // Start from the bottom
+          initial={{ y: 300, opacity: 0 }}  // Start from the bottom
           whileInView={{ y: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
            <motion.div 
           
@@ -62,11 +61,11 @@ function ServicesCard() {
 
         {/* UI/UX Designing Card */}
         <motion.div
-          initial={{ x: 20, opacity: 0 }}  // Start from the right
+          initial={{ x: 300, opacity: 0 }}  // Start from the right
           whileInView={{ x: 0, opacity: 1 }}  // Animate to the center
                 // Trigger animation only once when in view
           transition={{ duration: 0.7 }}      // Animation duration
-          className="mt-10 p-6 rounded-lg shadow-lg max-w-sm mx-auto"
+          className="mt-10  rounded-lg shadow-lg max-w-sm mx-auto"
         >
               <motion.div 
           
