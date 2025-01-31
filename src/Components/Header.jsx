@@ -440,7 +440,7 @@ function Header() {
 
 
       {/* Main Header Content */}
-      <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between sm:pt-5">
+      <div className="container mx-auto flex flex-wrap  md:flex-row items-center justify-between ">
         {/* Logo */}
         <Link className="flex items-center text-gray-900  md:mb-0">
           <img
