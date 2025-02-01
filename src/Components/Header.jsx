@@ -459,7 +459,7 @@ function Header() {
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col  md:flex-row sm:items-start sm:justify-start bg-black top-20 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0 lg:-mt-32  pb-4  w-full `}
+              } flex-col  md:flex-row sm:items-start sm:justify-start bg-black top-20 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0 lg:-mt-24  pb-4  w-full `}
             >
               <Link
                 to="/"
