@@ -445,7 +445,7 @@ function Header() {
           <img
             src={logo}
             alt="Logo"
-            className="w-28 h-12 sm:w-36 sm:h-16 md:w-44 lg:-ml-9 md:h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-28"
+            className="w-32 h-12 sm:w-36 sm:h-16 md:w-44 lg:-ml-9 md:h-20 lg:w-48 lg:h-24 xl:w-56 xl:h-28"
           />
         </Link>
 
@@ -459,7 +459,7 @@ function Header() {
             <nav
               className={`${
                 isOpen ? "flex" : "hidden"
-              } flex-col md:flex-row sm:items-center sm:justify-center bg-black sm:top-4 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0  pb-4 top-20 w-full md:h-auto`}
+              } flex-col  md:flex-row sm:items-start sm:justify-start bg-black top-28 gap-6 md:gap-8 text-white fixed md:relative md:flex left-0 lg:-mt-32  pb-4  w-full `}
             >
               <Link
                 to="/"
@@ -472,7 +472,7 @@ function Header() {
               {/* Services Dropdown */}
               <div className="relative">
                 <button
-                  className="text-lg font-semibold hover:text-gray-300 flex items-center"
+                  className="text-lg font-semibold hover:text-gray-300 flex items-center "
                 >
                   <Link to="/Services">
                     <span className="text-white hover:text-[#91BE7F] sm:hover:border-b-4 sm:hover:border-[#91BE7F] font-bold">
@@ -486,7 +486,7 @@ function Header() {
 
                 {/* Dropdown Menu */}
                 {isDropdownOpen && (
-                  <div className=" relative sm:absolute sm:text-black sm:bg-white top-full left-0 bg-black text-sm text-white shadow-lg rounded-md w-52 mt-1 z-50">
+                  <div className=" absolute sm:absolute sm:text-black sm:bg-white z-50  left-0 bg-black text-sm text-white shadow-lg rounded-md w-52  mt-1">
                     <Link
                       to="/SoftwareDevelopment"
                       className="block font-semibold px-5 py-4 hover:bg-black hover:text-[#91BE7F]"
