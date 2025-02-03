@@ -32,7 +32,7 @@ function BgService() {
   return (
     <div className="bg-black w-full py-16 text-white">
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl text-center font-bold mt-12 md:mt-24 lg:mt-32 font-serif -mb-28 sm:mb-0 md:-mb-20 lg:mb-0 underline">
+      <h1 className="text-4xl md:text-5xl text-center font-bold mt-12 md:mt-24 lg:mt-32 font-serif -mb-18 sm:mb-0 md:-mb-20 lg:mb-0 underline">
         SERVICES
       </h1>
       <div className="relative w-full h-auto min-h-[50vh] md:min-h-screen overflow-hidden flex items-center justify-center">
