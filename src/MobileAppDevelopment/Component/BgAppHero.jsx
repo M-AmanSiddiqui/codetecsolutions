@@ -5,7 +5,7 @@ function BgAppHero() {
     <div className="relative bg-black text-white">
       {/* Heading */}
       <div className="inset-0 z-10 flex justify-center">
-        <h1 className="text-4xl md:text-3xl lg:text-5xl items-center font-bold pt-10 font-serif underline">
+        <h1 className="text-4xl md:text-3xl lg:text-5xl items-center font-bold pt-18 mt-44 font-serif underline">
           MOBILE APP DEVELOPMENT
         </h1>
       </div>

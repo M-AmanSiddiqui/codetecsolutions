@@ -185,7 +185,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-black text-white p-8 overflow-x-hidden">
+    <div className="bg-black text-white p-8 overflow-x-hidden sm:mt-14 md:mt-28">
       <div className="flex flex-col md:flex-row max-w-8xl mx-auto p-8 justify-center items-center bg-black text-black">
         {/* Form Section */}
         <div className="w-full md:w-1/2 p-4 mb-8 md:mb-0">

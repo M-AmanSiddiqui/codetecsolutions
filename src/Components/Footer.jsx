@@ -6,6 +6,8 @@ import { FaPhone } from "react-icons/fa6";
 import { GoClockFill } from "react-icons/go";
 import { FaFacebookSquare, FaInstagramSquare, FaTwitterSquare, FaLinkedin } from "react-icons/fa";
 
+import { MdArrowOutward } from "react-icons/md";
+
 const Footer = () => {
   const handleMailClick = () => {
     window.open("https://mail.google.com/mail/?view=cm&fs=1&to=contact@codetecsolutions.com", "_blank");
@@ -50,26 +52,36 @@ const Footer = () => {
 
         {/* Products Section */}
         <div>
-          <h3 className="font-bold uppercase mb-4">Products</h3>
-          <ul className="space-y-2">
+          <h3 className="font-bold uppercase mb-4 ml-3 text-1xl">Products</h3>
+          <ul className="space-y-3">
             <li>
-              <Link to="/SoftwareDevelopment" className="hover:text-[#91BE7F]">
+               <Link
+                to="/SoftwareDevelopment"
+                className="group flex items-center hover:text-[#91BE7F]  transition duration-300"
+              >
+                <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Software Development
               </Link>
             </li>
             <li>
-              <Link to="/MobileAppDevelopment" className="hover:text-[#91BE7F]">
+              <Link to="/MobileAppDevelopment" className="group flex items-center hover:text-[#91BE7F]  transition duration-300">
+              
+              <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Mobile App Development
               </Link>
             </li>
             <li>
-              <Link to="/Ecommerce" className="hover:text-[#91BE7F]">
+              <Link to="/Ecommerce" className="group flex items-center hover:text-[#91BE7F]  transition duration-300">
+              
+              <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                E-commerce
               </Link>
             </li>
            
             <li>
-              <Link to="/GraphicDesigning"className="hover:text-[#91BE7F]">
+              <Link to="/GraphicDesigning"className="group flex items-center hover:text-[#91BE7F]  transition duration-300">
+              
+              <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Graphics Designing
               </Link>
             </li>
@@ -78,15 +90,19 @@ const Footer = () => {
 
         {/* About Section */}
         <div>
-          <h3 className="font-bold uppercase mb-4">About</h3>
+          <h3 className="font-bold uppercase mb-4 ml-3 text-1xl">About</h3>
           <ul className="space-y-2">
             <li>
-              <Link to="/About" className="hover:text-[#91BE7F]">
+              <Link to="/About" className="group flex items-center hover:text-[#91BE7F]  transition duration-300">
+              
+              <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 About
               </Link>
             </li>
             <li>
-              <Link to="/Contact" className="hover:text-[#91BE7F]">
+              <Link to="/Contact" className="group flex items-center hover:text-[#91BE7F]  transition duration-300">
+              
+              <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Contact
               </Link>
             </li>
@@ -95,7 +111,7 @@ const Footer = () => {
 
         {/* Details Section */}
         <div>
-          <h3 className="font-bold uppercase mb-4">Details</h3>
+          <h3 className="font-bold uppercase mb-4 ml-3 text-1xl">Details</h3>
           <ul className="space-y-2">
             <li className="flex items-center space-x-2 hover:text-[#91BE7F]">
               <FaLocationArrow /><Link to="#" onClick={openMap}>

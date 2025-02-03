@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 function SoftwareHero() {
   return (
     <div className="bg-black w-full py-12 text-white">
-      <h1 className="text-4xl md:text-4xl text-center font-bold font-serif mt-12 underline">
+      <h1 className="text-4xl md:text-4xl text-center font-bold font-serif mt-44 underline">
         SOFTWARE DEVELOPMENT
       </h1>
 

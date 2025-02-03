@@ -149,7 +149,7 @@ function GraphicHero() {
   }, [mouseX, mouseY]);
 
   return (
-    <div className="bg-black w-full py-16 text-white">
+    <div className="bg-black w-full sm:py-40 py-32 md:py-56 text-white">
       {/* Designing & Production */}
       <div className="container mx-auto flex flex-col md:flex-row px-6 md:px-12 lg:px-16 space-y-12 md:space-y-0 md:space-x-8 pt-0">
         {/* Content */}
