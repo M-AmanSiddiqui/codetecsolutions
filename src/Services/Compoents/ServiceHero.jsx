@@ -8,7 +8,7 @@ import { motion } from "framer-motion"; // Ensure motion is imported from framer
 
 function ServiceHero() {
     return (
-      <div className="bg-black w-full py-16 text-white ">
+      <div className="bg-black w-full  text-white ">
         {/* Web Development */}
         <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 space-y-12 md:space-y-0 md:space-x-8">
         <div className="flex-1">
