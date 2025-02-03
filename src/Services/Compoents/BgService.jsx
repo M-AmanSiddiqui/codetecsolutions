@@ -6,7 +6,7 @@ function BgService() {
 
     <div className="bg-black w-full py-16 text-white">
     {/* Heading */}
-    <h1 className="text-4xl md:text-5xl text-center font-bold font-serif mb-20 underline">
+    <h1 className="text-4xl md:text-5xl text-center font-bold mt-12 md:mt-24 lg:mt-32 font-serif mb-20 underline">
       SERVICES
     </h1>
     <div className="relative w-full h-screen overflow-hidden ">
